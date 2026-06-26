@@ -95,7 +95,7 @@ section{padding:46px 0}
 .agitate .card-img img{border-radius:18px;box-shadow:var(--shadow)}
 
 /* steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .step{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;text-align:center;box-shadow:var(--shadow2)}
 .step .n{width:42px;height:42px;border-radius:50%;margin:0 auto 12px;display:grid;place-content:center;font-weight:800;color:#fff;
   background:linear-gradient(180deg,var(--blue),var(--blue2));font-size:18px}
@@ -110,7 +110,7 @@ section{padding:46px 0}
 .gallery .gi:first-child img{aspect-ratio:auto;height:100%}
 
 /* benefits */
-.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .benefit{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow2)}
 .benefit .ic{width:46px;height:46px;border-radius:12px;display:grid;place-content:center;margin-bottom:12px;
   background:var(--bg3);color:var(--blue2)}
@@ -120,7 +120,7 @@ section{padding:46px 0}
 
 /* bundle offer */
 .offer{background:linear-gradient(180deg,var(--bg3),#fff)}
-.bundles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+.bundles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:8px}
 .bundle{position:relative;background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:20px 16px 18px;text-align:center;
   cursor:pointer;transition:border-color .15s,transform .15s,box-shadow .15s}
 .bundle:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
