@@ -14,6 +14,8 @@
     }, { threshold: 0.12 });
     $$(".reveal").forEach(function (el) { io.observe(el); });
   } else { $$(".reveal").forEach(function (el) { el.classList.add("in"); }); }
+  // backstop: never leave content hidden if the observer misses (non-scrolling sessions, bots)
+  setTimeout(function () { $$(".reveal").forEach(function (el) { el.classList.add("in"); }); }, 4000);
 
   /* ---------- evergreen countdown ---------- */
   var WINDOW = 15 * 60 * 1000;

@@ -745,7 +745,7 @@ def jsonld(g):
 def geo_js(g):
     obj = {"code":g["code"],"cc":g["cc"],"c":g["c"],"s1":g["s1"],
            "thumb":"../assets/img/p2.webp","cities":g["cities"],"names":g["names"],"i18n":g["i18n"]}
-    return "window.GEO=%s;" % json.dumps(obj, ensure_ascii=False)
+    return "document.documentElement.classList.add('js');window.GEO=%s;" % json.dumps(obj, ensure_ascii=False)
 
 # ========================================================================
 # PAGE TEMPLATE
