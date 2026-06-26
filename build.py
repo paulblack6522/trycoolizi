@@ -653,6 +653,68 @@ REDIRECT_STEPS = {
  "el":["Εφαρμογή της έκπτωσης −50%","Κρατάμε τη μονάδα σας","Άνοιγμα ασφαλούς πληρωμής"],
 }
 
+EMAIL = "hello@trycoolizi.com"
+# Localised first-party policy/EEAT strings. Pages: privacy, terms, disclosure, contact.
+LEGAL = {
+ "en": dict(reviewed_by="Reviewed by", editor="James Whitfield", role="Home Cooling Editor", updated="Updated", hands_on="Independent hands-on review",
+   back="← Back to review", l_privacy="Privacy Policy", l_terms="Terms", l_disclosure="Affiliate Disclosure", l_contact="Contact", l_shipping="Shipping & Returns (official store)",
+   t_privacy="Privacy Policy", t_terms="Terms of Use", t_disclosure="Affiliate Disclosure", t_contact="Contact Us",
+   b_privacy=f"<p>trycoolizi.com is an independent review website. We respect your privacy and do not sell your personal data.</p><h2>What we collect</h2><p>We use a geolocation service (ipinfo.io) to detect your approximate country/city so we can show local pricing and relevant information. We store small values in your browser (localStorage) to run the on-page discount timer and recent-activity notice. We do not require you to create an account or submit personal details to read this site.</p><h2>Cookies & third parties</h2><p>When you click through to the official Coolizi store, that store may set its own cookies under its own privacy policy. Any future advertising pixels will be disclosed and, where required, gated behind consent.</p><h2>Your rights & contact</h2><p>You can clear the data we store at any time by clearing your browser storage. For any privacy request under the GDPR, email <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>This website provides information and opinion about the Coolizi portable cooler. We are an independent reviewer, <b>not</b> the seller or manufacturer.</p><h2>Purchases</h2><p>All orders are placed on, fulfilled by, and supported by the official Coolizi store. Prices, stock, shipping and returns are set by that store and may change. Please review their terms before buying.</p><h2>No warranty</h2><p>Information here is provided in good faith and 'as is', without warranty. We are not liable for decisions made based on this content. Trademarks belong to their respective owners.</p>",
+   b_disclosure=f"<p>trycoolizi.com participates in affiliate programs. If you buy through links on this site, we may earn a commission — <b>at no extra cost to you</b>.</p><p>This never changes the price you pay, and our views are our own. We are an independent review site and not the official Coolizi store. Questions? Email <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>We're an independent review site. For questions about this website, partnerships or privacy requests, email us:</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>For order, shipping, refund or product-support questions, please contact the official Coolizi store, which fulfils all purchases.</p>"),
+ "de": dict(reviewed_by="Geprüft von", editor="Lukas Wagner", role="Redakteur Raumkühlung", updated="Aktualisiert", hands_on="Unabhängiger Praxis-Test",
+   back="← Zurück zum Test", l_privacy="Datenschutz", l_terms="AGB", l_disclosure="Affiliate-Hinweis", l_contact="Kontakt", l_shipping="Versand & Rückgabe (offizieller Shop)",
+   t_privacy="Datenschutzerklärung", t_terms="Nutzungsbedingungen", t_disclosure="Affiliate-Hinweis", t_contact="Kontakt & Impressum",
+   b_privacy=f"<p>trycoolizi.com ist eine unabhängige Test-Website. Wir respektieren Ihre Privatsphäre und verkaufen Ihre personenbezogenen Daten nicht.</p><h2>Was wir erfassen</h2><p>Wir nutzen einen Geolokalisierungsdienst (ipinfo.io), um Ihr ungefähres Land/Ihre Stadt zu erkennen und lokale Preise und passende Informationen anzuzeigen. Im Browser (localStorage) speichern wir kleine Werte für den Rabatt-Timer und den Aktivitäts-Hinweis. Zum Lesen ist kein Konto erforderlich.</p><h2>Cookies & Dritte</h2><p>Wenn Sie zum offiziellen Coolizi-Shop weiterklicken, kann dieser eigene Cookies gemäß seiner eigenen Datenschutzerklärung setzen.</p><h2>Ihre Rechte & Kontakt</h2><p>Sie können die gespeicherten Daten jederzeit durch Leeren des Browserspeichers löschen. Für DSGVO-Anfragen schreiben Sie an <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>Diese Website bietet Informationen und Meinungen zum Coolizi mobilen Kühlgerät. Wir sind ein unabhängiger Tester, <b>nicht</b> der Verkäufer oder Hersteller.</p><h2>Käufe</h2><p>Alle Bestellungen werden im offiziellen Coolizi-Shop aufgegeben, ausgeführt und betreut. Preise, Verfügbarkeit, Versand und Rückgabe legt dieser Shop fest und können sich ändern.</p><h2>Keine Gewährleistung</h2><p>Die Informationen werden nach bestem Wissen und 'wie besehen' bereitgestellt, ohne Gewähr. Marken gehören ihren jeweiligen Inhabern.</p>",
+   b_disclosure=f"<p>trycoolizi.com nimmt an Affiliate-Programmen teil. Wenn Sie über Links auf dieser Seite kaufen, erhalten wir ggf. eine Provision — <b>ohne Mehrkosten für Sie</b>.</p><p>Der Preis ändert sich dadurch nie, und unsere Meinung ist unabhängig. Wir sind nicht der offizielle Coolizi-Shop. Fragen? <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>Wir sind eine unabhängige Test-Website. Bei Fragen zur Website, Kooperationen oder Datenschutz schreiben Sie an:</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>Für Bestellung, Versand, Rückerstattung oder Produktsupport wenden Sie sich bitte an den offiziellen Coolizi-Shop, der alle Käufe abwickelt.</p>"),
+ "fr": dict(reviewed_by="Testé par", editor="Julien Moreau", role="Rédacteur Rafraîchissement", updated="Mis à jour", hands_on="Test indépendant en conditions réelles",
+   back="← Retour à l'avis", l_privacy="Confidentialité", l_terms="Conditions", l_disclosure="Divulgation d'affiliation", l_contact="Contact", l_shipping="Livraison & retours (boutique officielle)",
+   t_privacy="Politique de confidentialité", t_terms="Conditions d'utilisation", t_disclosure="Divulgation d'affiliation", t_contact="Nous contacter",
+   b_privacy=f"<p>trycoolizi.com est un site d'avis indépendant. Nous respectons votre vie privée et ne vendons pas vos données personnelles.</p><h2>Ce que nous collectons</h2><p>Nous utilisons un service de géolocalisation (ipinfo.io) pour détecter votre pays/ville approximatif et afficher les prix locaux. Nous stockons de petites valeurs dans votre navigateur (localStorage) pour le minuteur de réduction et l'avis d'activité. Aucun compte n'est requis.</p><h2>Cookies & tiers</h2><p>En cliquant vers la boutique officielle Coolizi, celle-ci peut définir ses propres cookies selon sa propre politique.</p><h2>Vos droits & contact</h2><p>Vous pouvez effacer ces données à tout moment en vidant le stockage du navigateur. Pour toute demande RGPD : <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>Ce site fournit des informations et avis sur le rafraîchisseur portable Coolizi. Nous sommes un évaluateur indépendant, <b>pas</b> le vendeur ni le fabricant.</p><h2>Achats</h2><p>Toutes les commandes sont passées, traitées et suivies par la boutique officielle Coolizi. Les prix, le stock, la livraison et les retours sont fixés par cette boutique et peuvent changer.</p><h2>Aucune garantie</h2><p>Les informations sont fournies de bonne foi et 'en l'état', sans garantie. Les marques appartiennent à leurs propriétaires respectifs.</p>",
+   b_disclosure=f"<p>trycoolizi.com participe à des programmes d'affiliation. Si vous achetez via les liens de ce site, nous pouvons percevoir une commission — <b>sans coût supplémentaire pour vous</b>.</p><p>Cela ne change jamais le prix payé, et nos avis sont les nôtres. Nous ne sommes pas la boutique officielle Coolizi. Questions ? <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>Nous sommes un site d'avis indépendant. Pour toute question sur ce site, partenariats ou confidentialité :</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>Pour les questions de commande, livraison, remboursement ou support produit, contactez la boutique officielle Coolizi qui traite tous les achats.</p>"),
+ "it": dict(reviewed_by="Recensito da", editor="Marco Riva", role="Redattore Raffrescamento", updated="Aggiornato", hands_on="Prova indipendente sul campo",
+   back="← Torna alla recensione", l_privacy="Privacy", l_terms="Termini", l_disclosure="Informativa di affiliazione", l_contact="Contatti", l_shipping="Spedizione & resi (store ufficiale)",
+   t_privacy="Informativa sulla privacy", t_terms="Termini d'uso", t_disclosure="Informativa di affiliazione", t_contact="Contattaci",
+   b_privacy=f"<p>trycoolizi.com è un sito di recensioni indipendente. Rispettiamo la tua privacy e non vendiamo i tuoi dati personali.</p><h2>Cosa raccogliamo</h2><p>Usiamo un servizio di geolocalizzazione (ipinfo.io) per rilevare il tuo Paese/città approssimativi e mostrare prezzi locali. Salviamo piccoli valori nel browser (localStorage) per il timer dello sconto e l'avviso di attività. Non è richiesto alcun account.</p><h2>Cookie & terze parti</h2><p>Cliccando verso lo store ufficiale Coolizi, questo può impostare propri cookie secondo la propria informativa.</p><h2>I tuoi diritti & contatti</h2><p>Puoi cancellare questi dati in qualsiasi momento svuotando l'archivio del browser. Per richieste GDPR: <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>Questo sito fornisce informazioni e opinioni sul raffrescatore portatile Coolizi. Siamo un recensore indipendente, <b>non</b> il venditore o il produttore.</p><h2>Acquisti</h2><p>Tutti gli ordini sono effettuati, gestiti e assistiti dallo store ufficiale Coolizi. Prezzi, disponibilità, spedizione e resi sono stabiliti da tale store e possono cambiare.</p><h2>Nessuna garanzia</h2><p>Le informazioni sono fornite in buona fede e 'così come sono', senza garanzia. I marchi appartengono ai rispettivi proprietari.</p>",
+   b_disclosure=f"<p>trycoolizi.com partecipa a programmi di affiliazione. Se acquisti tramite i link di questo sito, potremmo ricevere una commissione — <b>senza costi aggiuntivi per te</b>.</p><p>Questo non cambia mai il prezzo che paghi e le opinioni sono nostre. Non siamo lo store ufficiale Coolizi. Domande? <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>Siamo un sito di recensioni indipendente. Per domande sul sito, partnership o privacy:</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>Per ordini, spedizione, rimborsi o supporto prodotto, contatta lo store ufficiale Coolizi che gestisce tutti gli acquisti.</p>"),
+ "es": dict(reviewed_by="Analizado por", editor="Javier García", role="Editor de Climatización", updated="Actualizado", hands_on="Prueba independiente real",
+   back="← Volver a la reseña", l_privacy="Privacidad", l_terms="Términos", l_disclosure="Divulgación de afiliación", l_contact="Contacto", l_shipping="Envíos y devoluciones (tienda oficial)",
+   t_privacy="Política de privacidad", t_terms="Términos de uso", t_disclosure="Divulgación de afiliación", t_contact="Contacto",
+   b_privacy=f"<p>trycoolizi.com es un sitio de reseñas independiente. Respetamos tu privacidad y no vendemos tus datos personales.</p><h2>Qué recopilamos</h2><p>Usamos un servicio de geolocalización (ipinfo.io) para detectar tu país/ciudad aproximados y mostrar precios locales. Guardamos pequeños valores en tu navegador (localStorage) para el temporizador de descuento y el aviso de actividad. No se requiere cuenta.</p><h2>Cookies y terceros</h2><p>Al hacer clic hacia la tienda oficial Coolizi, esta puede establecer sus propias cookies según su política.</p><h2>Tus derechos y contacto</h2><p>Puedes borrar estos datos cuando quieras vaciando el almacenamiento del navegador. Para solicitudes RGPD: <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>Este sitio ofrece información y opinión sobre el climatizador portátil Coolizi. Somos un evaluador independiente, <b>no</b> el vendedor ni el fabricante.</p><h2>Compras</h2><p>Todos los pedidos se realizan, gestionan y atienden en la tienda oficial Coolizi. Precios, stock, envío y devoluciones los fija dicha tienda y pueden cambiar.</p><h2>Sin garantía</h2><p>La información se ofrece de buena fe y 'tal cual', sin garantía. Las marcas pertenecen a sus respectivos propietarios.</p>",
+   b_disclosure=f"<p>trycoolizi.com participa en programas de afiliación. Si compras a través de los enlaces de este sitio, podemos ganar una comisión — <b>sin coste adicional para ti</b>.</p><p>Esto nunca cambia el precio que pagas y las opiniones son nuestras. No somos la tienda oficial Coolizi. ¿Preguntas? <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>Somos un sitio de reseñas independiente. Para dudas sobre el sitio, colaboraciones o privacidad:</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>Para pedidos, envío, reembolsos o soporte del producto, contacta con la tienda oficial Coolizi, que gestiona todas las compras.</p>"),
+ "nl": dict(reviewed_by="Beoordeeld door", editor="Daan Visser", role="Redacteur Koeling", updated="Bijgewerkt", hands_on="Onafhankelijke praktijktest",
+   back="← Terug naar review", l_privacy="Privacy", l_terms="Voorwaarden", l_disclosure="Affiliate-verklaring", l_contact="Contact", l_shipping="Verzending & retour (officiële winkel)",
+   t_privacy="Privacybeleid", t_terms="Gebruiksvoorwaarden", t_disclosure="Affiliate-verklaring", t_contact="Contact",
+   b_privacy=f"<p>trycoolizi.com is een onafhankelijke reviewsite. We respecteren je privacy en verkopen je persoonsgegevens niet.</p><h2>Wat we verzamelen</h2><p>We gebruiken een geolocatiedienst (ipinfo.io) om je geschatte land/stad te bepalen en lokale prijzen te tonen. We slaan kleine waarden op in je browser (localStorage) voor de kortingstimer en activiteitsmelding. Een account is niet nodig.</p><h2>Cookies & derden</h2><p>Als je doorklikt naar de officiële Coolizi-winkel kan die eigen cookies plaatsen volgens haar eigen beleid.</p><h2>Je rechten & contact</h2><p>Je kunt deze gegevens altijd wissen door je browseropslag te legen. Voor AVG-verzoeken: <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>Deze site biedt informatie en mening over de draagbare Coolizi-koeler. We zijn een onafhankelijke beoordelaar, <b>niet</b> de verkoper of fabrikant.</p><h2>Aankopen</h2><p>Alle bestellingen worden geplaatst, afgehandeld en ondersteund door de officiële Coolizi-winkel. Prijzen, voorraad, verzending en retour worden door die winkel bepaald en kunnen wijzigen.</p><h2>Geen garantie</h2><p>Informatie wordt te goeder trouw en 'as is' verstrekt, zonder garantie. Merken zijn van hun respectieve eigenaren.</p>",
+   b_disclosure=f"<p>trycoolizi.com neemt deel aan affiliateprogramma's. Als je via links op deze site koopt, kunnen we een commissie verdienen — <b>zonder extra kosten voor jou</b>.</p><p>Dit verandert nooit de prijs die je betaalt en onze mening is onafhankelijk. We zijn niet de officiële Coolizi-winkel. Vragen? <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>We zijn een onafhankelijke reviewsite. Voor vragen over de site, samenwerkingen of privacy:</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>Voor bestelling, verzending, terugbetaling of productondersteuning neem je contact op met de officiële Coolizi-winkel, die alle aankopen afhandelt.</p>"),
+ "pt": dict(reviewed_by="Avaliado por", editor="Tiago Ferreira", role="Editor de Climatização", updated="Atualizado", hands_on="Teste independente real",
+   back="← Voltar à análise", l_privacy="Privacidade", l_terms="Termos", l_disclosure="Divulgação de afiliação", l_contact="Contacto", l_shipping="Envio & devoluções (loja oficial)",
+   t_privacy="Política de privacidade", t_terms="Termos de utilização", t_disclosure="Divulgação de afiliação", t_contact="Contacto",
+   b_privacy=f"<p>trycoolizi.com é um site de análises independente. Respeitamos a sua privacidade e não vendemos os seus dados pessoais.</p><h2>O que recolhemos</h2><p>Usamos um serviço de geolocalização (ipinfo.io) para detetar o seu país/cidade aproximados e mostrar preços locais. Guardamos pequenos valores no seu navegador (localStorage) para o temporizador de desconto e o aviso de atividade. Não é necessária conta.</p><h2>Cookies & terceiros</h2><p>Ao clicar para a loja oficial Coolizi, esta pode definir os seus próprios cookies segundo a sua política.</p><h2>Os seus direitos & contacto</h2><p>Pode apagar estes dados a qualquer momento limpando o armazenamento do navegador. Para pedidos RGPD: <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>Este site fornece informação e opinião sobre o climatizador portátil Coolizi. Somos um avaliador independente, <b>não</b> o vendedor nem o fabricante.</p><h2>Compras</h2><p>Todas as encomendas são feitas, processadas e apoiadas pela loja oficial Coolizi. Preços, stock, envio e devoluções são definidos por essa loja e podem mudar.</p><h2>Sem garantia</h2><p>A informação é fornecida de boa-fé e 'tal como está', sem garantia. As marcas pertencem aos respetivos proprietários.</p>",
+   b_disclosure=f"<p>trycoolizi.com participa em programas de afiliação. Se comprar através dos links deste site, podemos receber uma comissão — <b>sem custo adicional para si</b>.</p><p>Isto nunca altera o preço que paga e as opiniões são nossas. Não somos a loja oficial Coolizi. Dúvidas? <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>Somos um site de análises independente. Para questões sobre o site, parcerias ou privacidade:</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>Para encomenda, envio, reembolso ou suporte do produto, contacte a loja oficial Coolizi, que processa todas as compras.</p>"),
+ "el": dict(reviewed_by="Αξιολογήθηκε από", editor="Giorgos Konstantinou", role="Συντάκτης Ψύξης", updated="Ενημερώθηκε", hands_on="Ανεξάρτητη πρακτική δοκιμή",
+   back="← Επιστροφή στην κριτική", l_privacy="Απόρρητο", l_terms="Όροι", l_disclosure="Γνωστοποίηση συνεργασίας", l_contact="Επικοινωνία", l_shipping="Αποστολή & επιστροφές (επίσημο κατάστημα)",
+   t_privacy="Πολιτική απορρήτου", t_terms="Όροι χρήσης", t_disclosure="Γνωστοποίηση συνεργασίας", t_contact="Επικοινωνία",
+   b_privacy=f"<p>Το trycoolizi.com είναι ανεξάρτητος ιστότοπος κριτικών. Σεβόμαστε το απόρρητό σας και δεν πουλάμε τα προσωπικά σας δεδομένα.</p><h2>Τι συλλέγουμε</h2><p>Χρησιμοποιούμε υπηρεσία γεωεντοπισμού (ipinfo.io) για να εντοπίσουμε την κατά προσέγγιση χώρα/πόλη σας και να εμφανίσουμε τοπικές τιμές. Αποθηκεύουμε μικρές τιμές στο πρόγραμμα περιήγησης (localStorage) για το χρονόμετρο έκπτωσης και την ειδοποίηση δραστηριότητας. Δεν απαιτείται λογαριασμός.</p><h2>Cookies & τρίτοι</h2><p>Όταν μεταβαίνετε στο επίσημο κατάστημα Coolizi, αυτό μπορεί να ορίσει δικά του cookies βάσει της δικής του πολιτικής.</p><h2>Τα δικαιώματά σας & επικοινωνία</h2><p>Μπορείτε να διαγράψετε αυτά τα δεδομένα ανά πάσα στιγμή. Για αιτήματα GDPR: <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_terms=f"<p>Αυτός ο ιστότοπος παρέχει πληροφορίες και απόψεις για τον φορητό ψύκτη Coolizi. Είμαστε ανεξάρτητος αξιολογητής, <b>όχι</b> ο πωλητής ή ο κατασκευαστής.</p><h2>Αγορές</h2><p>Όλες οι παραγγελίες γίνονται, εκτελούνται και υποστηρίζονται από το επίσημο κατάστημα Coolizi. Οι τιμές, το απόθεμα, η αποστολή και οι επιστροφές καθορίζονται από αυτό το κατάστημα και μπορεί να αλλάξουν.</p><h2>Καμία εγγύηση</h2><p>Οι πληροφορίες παρέχονται καλόπιστα και 'ως έχουν', χωρίς εγγύηση. Τα εμπορικά σήματα ανήκουν στους κατόχους τους.</p>",
+   b_disclosure=f"<p>Το trycoolizi.com συμμετέχει σε προγράμματα συνεργατών. Αν αγοράσετε μέσω συνδέσμων αυτού του ιστότοπου, ενδέχεται να λάβουμε προμήθεια — <b>χωρίς επιπλέον κόστος για εσάς</b>.</p><p>Αυτό δεν αλλάζει ποτέ την τιμή που πληρώνετε και οι απόψεις είναι δικές μας. Δεν είμαστε το επίσημο κατάστημα Coolizi. Ερωτήσεις; <a href='mailto:{EMAIL}'>{EMAIL}</a>.</p>",
+   b_contact=f"<p>Είμαστε ανεξάρτητος ιστότοπος κριτικών. Για ερωτήσεις σχετικά με τον ιστότοπο, συνεργασίες ή απόρρητο:</p><p><a href='mailto:{EMAIL}'><b>{EMAIL}</b></a></p><p>Για παραγγελία, αποστολή, επιστροφή χρημάτων ή υποστήριξη προϊόντος, επικοινωνήστε με το επίσημο κατάστημα Coolizi, που διεκπεραιώνει όλες τις αγορές.</p>"),
+}
+POLICY_KINDS = ["privacy", "terms", "disclosure", "contact"]
+
 def build_bundles(g):
     cur, L = g["cur"], g["bundle_labels"]
     rows = [
@@ -719,6 +781,50 @@ def build_trust(g):
 
 def build_agitate_list(g):
     return "\n".join('<li><span class="x">✕</span><span>%s</span></li>' % item for item in g["agitate_list"])
+
+def foot_langnav(code):
+    out = []
+    for x in GEOS:
+        cur = ' aria-current="true"' if x["code"] == code else ''
+        out.append('<a href="%s/%s/"%s>%s</a>' % (DOMAIN, x["code"], cur, E(x["lang_label"])))
+    return "\n".join(out)
+
+def foot_links(g):
+    L = LEGAL[g["code"]]; c = g["code"]
+    ours = [(L["l_privacy"], "privacy"), (L["l_terms"], "terms"), (L["l_disclosure"], "disclosure"), (L["l_contact"], "contact")]
+    items = ['<a href="%s/%s/%s/">%s</a>' % (DOMAIN, c, kind, E(lbl)) for lbl, kind in ours]
+    items.append('<a href="%s" rel="nofollow" target="_blank">%s</a>' % (E(g["footer_links"][0][1]), E(L["l_shipping"])))
+    return " · ".join(items)
+
+def byline(g):
+    L = LEGAL[g["code"]]
+    return ('<div class="byline"><img src="../assets/img/am1.webp" alt="" width="30" height="30" loading="lazy">'
+            '<span>%s <b>%s</b>, %s</span><span class="sep">·</span><span>%s %s</span><span class="sep">·</span><span>%s</span></div>'
+            % (E(L["reviewed_by"]), E(L["editor"]), E(L["role"]), E(L["updated"]), PRETTY, E(L["hands_on"])))
+
+def render_policy(g, kind, geos):
+    L = LEGAL[g["code"]]; c = g["code"]
+    title = {"privacy": L["t_privacy"], "terms": L["t_terms"], "disclosure": L["t_disclosure"], "contact": L["t_contact"]}[kind]
+    body = {"privacy": L["b_privacy"], "terms": L["b_terms"], "disclosure": L["b_disclosure"], "contact": L["b_contact"]}[kind]
+    hl = "".join('<link rel="alternate" hreflang="%s" href="%s/%s/%s/">' % (x["hreflang"], DOMAIN, x["code"], kind) for x in geos)
+    hl += '<link rel="alternate" hreflang="x-default" href="%s/en/%s/">' % (DOMAIN, kind)
+    return (
+'<!DOCTYPE html><html lang="%s"><head>'
+'<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+'<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate icon" href="/favicon.ico" sizes="any">'
+'<link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#0a91d8">'
+'<title>%s — Coolizi</title><meta name="description" content="%s · trycoolizi.com">'
+'<meta name="robots" content="index, follow"><link rel="canonical" href="%s/%s/%s/">%s'
+'<link rel="stylesheet" href="../../assets/styles.css"></head><body>'
+'<header class="nav"><div class="wrap"><a class="logo" href="/%s/"><span class="dot"></span>Coolizi<small>REVIEW</small></a></div></header>'
+'<main class="legal"><a class="back" href="/%s/">%s</a><h1>%s</h1><div class="upd">%s %s</div>%s</main>'
+'<footer><div class="wrap"><nav class="foot-lang" aria-label="Languages">%s</nav>'
+'<div class="links">%s</div>'
+'<div class="copy">© %s trycoolizi.com — independent review · Not the official Coolizi store.</div></div></footer>'
+'</body></html>'
+    ) % (g["lang"], E(title), E(title), DOMAIN, c, kind, hl,
+         c, c, E(L["back"]), E(title), E(L["updated"]), PRETTY, body,
+         foot_langnav(c), foot_links(g), str(datetime.date.today().year))
 
 def hreflang_links(geos, self_code):
     out = []
@@ -792,7 +898,9 @@ def render_page(g, geos):
       "FQ_KICK": E(g["faq_kick"]), "FQ_H2": E(g["faq_h2"]), "FAQ": build_faq(g),
       "FN_H2": E(g["final_h2"]), "FN_P": E(g["final_p"]), "FN_CD": E(g["final_cd_label"]), "FN_CTA": E(g["final_cta"]),
       "FOOT_DISC": E(g["footer_disc"]),
-      "FOOT_LINKS": " · ".join('<a href="%s" rel="nofollow" target="_blank">%s</a>' % (E(u), E(l)) for l, u in g["footer_links"]),
+      "FOOT_LINKS": foot_links(g),
+      "FOOT_LANGNAV": foot_langnav(g["code"]),
+      "BYLINE": byline(g),
       "STICKY_LABEL": E(g["sticky_label"]), "PRICE_S": cur(A["s"]), "WAS_S": cur(A["ws"]),
       "VIEWING": E(g["viewing"]).replace("{n}", '<b data-viewers>0</b>'),
       "STOCK": E(g["stock"]).replace("{n}", '<b data-stock>0</b>'),
@@ -858,6 +966,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     <p class="sub">{{SUB}}</p>
     <a class="btn pulse js-cta" href="#">{{HEROCTA}} <span class="arw">→</span></a>
     <div class="hero-cta-note">{{HERONOTE}}</div>
+    {{BYLINE}}
   </div>
   <div class="heroimg">
     <div class="badge-off"><b>50%</b>{{BADGEOFF}}</div>
@@ -943,8 +1052,9 @@ TEMPLATE = r"""<!DOCTYPE html>
 </div></section>
 
 <footer><div class="wrap">
-  <div class="disc">{{FOOT_DISC}}</div>
+  <nav class="foot-lang" aria-label="Languages">{{FOOT_LANGNAV}}</nav>
   <div class="links">{{FOOT_LINKS}}</div>
+  <div class="disc">{{FOOT_DISC}}</div>
   <div class="copy">© {{YEAR}} trycoolizi.com — independent review · Not the official Coolizi store.</div>
 </div></footer>
 
@@ -993,7 +1103,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 # ROOT PICKER / 404 / SITEMAP / ROBOTS / CNAME
 # ========================================================================
 def render_root(geos):
-    links = "\n".join('<a href="%s/">%s %s</a>' % (g["code"], {"en":"🇬🇧","de":"🇩🇪","fr":"🇫🇷","it":"🇮🇹","es":"🇪🇸","nl":"🇳🇱","pt":"🇵🇹","el":"🇬🇷"}[g["code"]], E(g["lang_label"])) for g in geos)
+    links = "\n".join('<a href="%s/%s/">%s %s</a>' % (DOMAIN, g["code"], {"en":"🇬🇧","de":"🇩🇪","fr":"🇫🇷","it":"🇮🇹","es":"🇪🇸","nl":"🇳🇱","pt":"🇵🇹","el":"🇬🇷"}[g["code"]], E(g["lang_label"])) for g in geos)
     geomap = {g["cc"]: g["code"] for g in geos}
     extra = {"AT":"de","CH":"de","BE":"fr"}
     geomap.update(extra)
@@ -1008,13 +1118,12 @@ def render_root(geos):
 <link rel="canonical" href="%s/en/">
 <link rel="stylesheet" href="assets/styles.css">
 <script>
-var M=%s;
-try{var c=(navigator.language||'').slice(0,2).toUpperCase();}catch(e){}
-// instant client-side geo redirect (keyless, fast) then fall back to language
+var M=%s, BASE='https://trycoolizi.com/', done=false;
+function go(dest){if(done)return;done=true;location.replace(BASE+dest+'/'+location.search);}
 fetch('https://ipwho.is/',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
-  var cc=(d&&d.country_code)||'';var dest=M[cc]||'en';location.replace(dest+'/'+location.search);
-}).catch(function(){location.replace('en/'+location.search);});
-setTimeout(function(){if(!window.__redir){location.replace('en/'+location.search);}},2500);
+  go(M[(d&&d.country_code)||'']||'en');
+}).catch(function(){go('en');});
+setTimeout(function(){go('en');},2500);
 </script>
 </head><body><div class="picker">
 <h1>Coolizi Portable AC</h1>
@@ -1154,9 +1263,11 @@ def write(path, content):
     return full
 
 def main():
-    n = 0
+    n = 0; pol = 0
     for g in GEOS:
         write("%s/index.html" % g["code"], render_page(g, GEOS)); n += 1
+        for kind in POLICY_KINDS:
+            write("%s/%s/index.html" % (g["code"], kind), render_policy(g, kind, GEOS)); pol += 1
     write("index.html", render_root(GEOS))
     write("404.html", render_404(GEOS))
     write("sitemap.xml", sitemap(GEOS))
@@ -1166,7 +1277,7 @@ def main():
     write("CNAME", "trycoolizi.com\n")
     write("a7f3c920e84b41d6b5e0c1f8d23a9e74.txt", "a7f3c920e84b41d6b5e0c1f8d23a9e74\n")  # IndexNow key
     write("favicon.svg", FAVICON_SVG)
-    print("Built %d geo pages + root + 404 + sitemap + robots + llms + CNAME" % n)
+    print("Built %d geo pages + %d policy pages + root + 404 + sitemap + robots + llms + favicon + CNAME" % (n, pol))
     print("Geos:", ", ".join(g["code"] for g in GEOS))
 
 if __name__ == "__main__":

@@ -188,6 +188,21 @@ footer .disc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,
 footer a{color:#cdd9e8}
 footer .links{display:flex;gap:8px 18px;flex-wrap:wrap}
 footer .copy{color:#6f8198;font-size:12px}
+footer .foot-lang{display:flex;flex-wrap:wrap;gap:7px 16px;justify-content:center;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .foot-lang a{color:#cdd9e8;font-size:13px}
+footer .foot-lang a[aria-current]{color:#fff;font-weight:700;text-decoration:underline}
+/* author / reviewer byline (EEAT) */
+.byline{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--mut);margin:14px 0 0;flex-wrap:wrap}
+.byline img{width:30px;height:30px;border-radius:50%}
+.byline b{color:var(--ink)} .byline .sep{opacity:.5}
+/* legal / policy pages */
+.legal{max-width:780px;margin:0 auto;padding:38px 18px 60px}
+.legal .back{display:inline-block;margin-bottom:16px;font-size:14px;font-weight:600}
+.legal h1{font-size:28px;margin:0 0 4px;letter-spacing:-.02em}
+.legal .upd{color:var(--mut);font-size:13px;margin:0 0 22px}
+.legal h2{font-size:18px;margin:24px 0 8px}
+.legal p,.legal li{color:var(--ink2);font-size:15px;line-height:1.7}
+.legal a{color:var(--blue2)}
 
 /* ---------- sticky buy bar ---------- */
 .stickybar{position:fixed;left:0;right:0;bottom:0;z-index:70;transform:translateY(110%);transition:transform .28s ease;
