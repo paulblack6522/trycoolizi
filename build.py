@@ -630,16 +630,15 @@ def svg(name, cls=""):
 def stars(n=5):
     return '<span class="s">' + ("★" * int(round(n))) + "</span>"
 
-def initial_av(name):
-    # simple SVG avatar with the person's initial — no external faces needed, fast + consistent
-    letter = html.escape(name.strip()[0])
-    palette = ["#0a91d8","#0fb98a","#7c6cf0","#ff8a3d","#e8455f","#19c2e6","#f0a500","#3aa76d"]
-    col = palette[ord(letter) % len(palette)]
-    return ("data:image/svg+xml;utf8,"
-            "<svg xmlns='http://www.w3.org/2000/svg' width='84' height='84'>"
-            "<rect width='84' height='84' rx='42' fill='%s'/>"
-            "<text x='50%%' y='54%%' font-size='38' fill='white' font-family='Arial' "
-            "text-anchor='middle' dominant-baseline='middle'>%s</text></svg>") % (col.replace("#","%23"), letter)
+FEMALE = set("Sarah Emma Charlotte Sophie Amelia Emily Anna Lena Marie Camille Léa Manon Chloé "
+             "Giulia Sofia Chiara Aurora Lucía María Paula Marta Sanne Lotte Tess Mariana Beatriz "
+             "Inês Ελένη Μαρία Σοφία Κατερίνα".split())
+AV_M = ["am%d.webp" % i for i in range(1, 9)]
+AV_W = ["aw%d.webp" % i for i in range(1, 9)]
+def face_av(name, i):
+    first = name.strip().split()[0]
+    pool = AV_W if first in FEMALE else AV_M
+    return "../assets/img/" + pool[i % len(pool)]
 
 def E(s): return html.escape(s, quote=True)
 
@@ -663,20 +662,20 @@ def build_bundles(g):
     return "\n".join(out)
 
 def build_reviews(g):
-    cards = []
+    cards = []; idx = 0
     for name, text in g["anchor"]:
         cards.append(
-            '<div class="rev-card"><div class="top"><img class="av" src="%s" alt="" loading="lazy">'
-            '<div class="who"><b>%s</b><span>%s</span></div><span class="verified">%s %s</span></div>'
+            '<div class="rev-card"><div class="top"><img class="av" src="%s" alt="%s" loading="lazy" width="42" height="42">'
+            '<div class="who"><b>%s</b><span>%s</span></div><span class="verified">✔ %s</span></div>'
             '<div class="rs">★★★★★</div><p>%s</p></div>'
-            % (initial_av(name), E(name), E(g["verified"]), svg("check","").replace('class=""','width="12" height="12"'), E(g["verified"]), E(text)))
+            % (face_av(name, idx), E(name), E(name), E(g["verified"]), E(g["verified"]), E(text))); idx += 1
     for name, city, text, days in g["wall"]:
         cards.append(
-            '<div class="rev-card"><div class="top"><img class="av" src="%s" alt="" loading="lazy">'
+            '<div class="rev-card"><div class="top"><img class="av" src="%s" alt="%s" loading="lazy" width="42" height="42">'
             '<div class="who"><b>%s</b><span>%s</span></div><span class="verified">✔ %s</span></div>'
             '<div class="rs">★★★★★</div><p>%s</p>'
             '<div class="meta"><span>%s</span></div></div>'
-            % (initial_av(name), E(name), E(city), E(g["verified"]), E(text), E(g["wall_date"](days) if False else "%dd" % days)))
+            % (face_av(name, idx), E(name), E(name), E(city), E(g["verified"]), E(text), "%dd" % days)); idx += 1
     return "\n".join(cards)
 
 def build_faq(g):
