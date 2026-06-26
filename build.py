@@ -1047,6 +1047,7 @@ def main():
     write("robots.txt", ROBOTS)
     write("llms.txt", LLMS)
     write("CNAME", "trycoolizi.com\n")
+    write("a7f3c920e84b41d6b5e0c1f8d23a9e74.txt", "a7f3c920e84b41d6b5e0c1f8d23a9e74\n")  # IndexNow key
     print("Built %d geo pages + root + 404 + sitemap + robots + llms + CNAME" % n)
     print("Geos:", ", ".join(g["code"] for g in GEOS))
 
