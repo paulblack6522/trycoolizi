@@ -1,0 +1,80 @@
+/* Coolizi — offer config, click-id capture, geo. Affiliate link assembled at click time. */
+(function () {
+  "use strict";
+
+  // ---- OFFER ----
+  // Network base; per-page window.GEO supplies c=<creative> and s1=try-<geo>.
+  var AFF_BASE = "https://bikiraibn.com/?a=2397";
+  var IPINFO_TOKEN = "fcc8c88c9a040a"; // primary geo provider; ipwho.is is keyless fallback
+
+  // ---- capture inbound click-ids ONCE (first-touch) ----
+  var TRACK_KEYS = ["gclid", "fbclid", "ttclid", "msclkid", "utm_source", "utm_campaign", "utm_medium", "s1", "s2"];
+  function captureClickIds() {
+    try {
+      var q = new URLSearchParams(location.search);
+      var store = JSON.parse(localStorage.getItem("cz_track") || "{}");
+      TRACK_KEYS.forEach(function (k) { var v = q.get(k); if (v && !store[k]) store[k] = v; });
+      if (!store._ts) store._ts = Date.now();
+      if (!store._lp) store._lp = location.pathname;
+      localStorage.setItem("cz_track", JSON.stringify(store));
+    } catch (e) {}
+  }
+  captureClickIds();
+
+  function getTrack() { try { return JSON.parse(localStorage.getItem("cz_track") || "{}"); } catch (e) { return {}; } }
+
+  // ---- build the outbound affiliate URL (call at click time) ----
+  function buildOfferUrl() {
+    var g = window.GEO || {};
+    var u = new URL(AFF_BASE);
+    if (g.c) u.searchParams.set("c", g.c);
+    u.searchParams.set("s1", g.s1 || ("try-" + (g.code || "xx")));
+    // pass any paid click-id into s2 for later reconciliation (ignored harmlessly if unused)
+    var t = getTrack();
+    var clickid = t.gclid || t.fbclid || t.ttclid || t.msclkid;
+    if (clickid) u.searchParams.set("s2", clickid);
+    return u.toString();
+  }
+
+  // ---- visitor geo for the social-proof ticker (ipinfo -> ipwho.is -> page default) ----
+  function getGeo() {
+    return new Promise(function (resolve) {
+      try {
+        var cached = JSON.parse(localStorage.getItem("cz_geo") || "null");
+        if (cached && cached.cc) return resolve(cached);
+      } catch (e) {}
+
+      var def = { cc: (window.GEO && window.GEO.cc) || "DE", city: null };
+      var done = false;
+      function finish(geo) {
+        if (done) return; done = true;
+        try { localStorage.setItem("cz_geo", JSON.stringify(geo)); } catch (e) {}
+        resolve(geo);
+      }
+      // hard timeout so the ticker never blocks
+      var timer = setTimeout(function () { finish(def); }, 3000);
+
+      function tryIpinfo() {
+        fetch("https://ipinfo.io/json?token=" + IPINFO_TOKEN, { cache: "no-store" })
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+          .then(function (d) {
+            if (d && d.country) { clearTimeout(timer); finish({ cc: d.country, city: d.city || null }); }
+            else tryIpwho();
+          })
+          .catch(tryIpwho);
+      }
+      function tryIpwho() {
+        fetch("https://ipwho.is/", { cache: "no-store" })
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+          .then(function (d) {
+            clearTimeout(timer);
+            finish({ cc: (d && d.country_code) || def.cc, city: (d && d.city) || null });
+          })
+          .catch(function () { clearTimeout(timer); finish(def); });
+      }
+      tryIpinfo();
+    });
+  }
+
+  window.COOLIZI = { buildOfferUrl: buildOfferUrl, getGeo: getGeo, getTrack: getTrack };
+})();
