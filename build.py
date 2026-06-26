@@ -642,6 +642,17 @@ def face_av(name, i):
 
 def E(s): return html.escape(s, quote=True)
 
+REDIRECT_STEPS = {
+ "en":["Applying your −50% discount","Reserving your unit in stock","Opening encrypted checkout"],
+ "de":["−50% Rabatt wird angewendet","Dein Gerät wird reserviert","Sicherer Checkout wird geöffnet"],
+ "fr":["Application de votre remise de −50%","Réservation de votre unité","Ouverture du paiement sécurisé"],
+ "it":["Applicazione dello sconto del −50%","Riserviamo la tua unità","Apertura del checkout sicuro"],
+ "es":["Aplicando tu descuento del −50%","Reservando tu unidad","Abriendo el pago seguro"],
+ "nl":["Je −50% korting wordt toegepast","Je apparaat wordt gereserveerd","Beveiligde checkout openen"],
+ "pt":["A aplicar o seu desconto de −50%","A reservar a sua unidade","A abrir o pagamento seguro"],
+ "el":["Εφαρμογή της έκπτωσης −50%","Κρατάμε τη μονάδα σας","Άνοιγμα ασφαλούς πληρωμής"],
+}
+
 def build_bundles(g):
     cur, L = g["cur"], g["bundle_labels"]
     rows = [
@@ -789,6 +800,7 @@ def render_page(g, geos):
       "EX_CLABEL": E(g["exit"]["coupon_label"]), "EX_CODE": E(g["exit"]["code"]),
       "EX_CTA": E(g["exit"]["cta"]), "EX_DECLINE": E(g["exit"]["decline"]),
       "RED_T": E(g["redirect"]["t"]), "RED_S": E(g["redirect"]["s"]),
+      "RED_S1": E(REDIRECT_STEPS[g["code"]][0]), "RED_S2": E(REDIRECT_STEPS[g["code"]][1]), "RED_S3": E(REDIRECT_STEPS[g["code"]][2]),
       "JSONLD": jsonld(g),
       "YEAR": str(datetime.date.today().year),
       "HEROIMG": IMAGES[0],
@@ -954,8 +966,18 @@ TEMPLATE = r"""<!DOCTYPE html>
   </div>
 </div></div>
 
-<!-- REDIRECT OVERLAY -->
-<div id="redirect"><div class="spin"></div><div class="rt">{{RED_T}}</div><div class="rbar"><i></i></div><div class="rs">{{RED_S}}</div></div>
+<!-- REDIRECT OVERLAY (blurs the page in place + glass card) -->
+<div id="redirect"><div class="rd-card">
+  <div class="rd-ring">
+    <svg viewBox="0 0 84 84"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a91d8"/><stop offset="1" stop-color="#0fb98a"/></linearGradient></defs>
+      <circle class="bg" cx="42" cy="42" r="36"/><circle class="fg" cx="42" cy="42" r="36"/></svg>
+    <span class="rd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V5z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  </div>
+  <div class="rd-title">{{RED_T}}</div>
+  <ul class="rd-steps"><li>{{RED_S1}}</li><li>{{RED_S2}}</li><li>{{RED_S3}}</li></ul>
+  <div class="rd-bar"><i></i></div>
+  <div class="rd-sub">🔒 {{RED_S}}</div>
+</div></div>
 
 <script src="../assets/config.js"></script>
 <script src="../assets/funnel.js"></script>

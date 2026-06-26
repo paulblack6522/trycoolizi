@@ -75,7 +75,7 @@
     var ov = $("#redirect");
     if (ov) ov.classList.add("show");
     var url = (window.COOLIZI && window.COOLIZI.buildOfferUrl()) || "https://bikiraibn.com/?a=2397";
-    setTimeout(function () { location.href = url; }, 1250);
+    setTimeout(function () { location.href = url; }, 1650);
   }
   document.addEventListener("click", function (e) {
     var t = e.target.closest(".js-cta"); if (!t) return;
