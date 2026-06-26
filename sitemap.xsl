@@ -10,6 +10,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>trycoolizi.com &#8211; XML Sitemap</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <style>
   :root{--ink:#0f1b2d;--mut:#6b7c93;--line:#e4ebf2;--bg:#f5f9fc;--blue:#0a91d8;--blue2:#0b6fb3;--mint:#0fb98a}
   *{box-sizing:border-box}

@@ -815,6 +815,10 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0a91d8">
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESC}}">
 <meta name="keywords" content="{{KEYWORDS}}">
@@ -997,6 +1001,10 @@ def render_root(geos):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coolizi Portable AC — Review &amp; Official Deal</title>
 <meta name="description" content="Coolizi portable air conditioner review, price and official discount. Choose your language.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0a91d8">
 <link rel="canonical" href="%s/en/">
 <link rel="stylesheet" href="assets/styles.css">
 <script>
@@ -1018,6 +1026,7 @@ def render_404(geos):
     links = " · ".join('<a href="/%s/">%s</a>' % (g["code"], E(g["lang_label"])) for g in geos)
     return """<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found — Coolizi</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate icon" href="/favicon.ico" sizes="any">
 <link rel="stylesheet" href="/assets/styles.css"></head><body><div class="picker">
 <h1>404</h1><p>Page not found. Pick your language:</p><div style="margin-top:14px">%s</div>
 </div></body></html>""" % links
@@ -1044,6 +1053,7 @@ SITEMAP_XSL = """<?xml version="1.0" encoding="UTF-8"?>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>trycoolizi.com &#8211; XML Sitemap</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <style>
   :root{--ink:#0f1b2d;--mut:#6b7c93;--line:#e4ebf2;--bg:#f5f9fc;--blue:#0a91d8;--blue2:#0b6fb3;--mint:#0fb98a}
   *{box-sizing:border-box}
@@ -1125,6 +1135,17 @@ Localized reviews, pricing and the official discount for UK, DE/AT/CH, FR/BE, IT
 > Affiliate disclosure: we may earn a commission on purchases made via our links.
 """
 
+FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a91d8"/><stop offset="1" stop-color="#0fb98a"/></linearGradient></defs>
+<rect width="64" height="64" rx="16" fill="url(#g)"/>
+<g stroke="#fff" stroke-width="3.4" stroke-linecap="round">
+<line x1="32" y1="11" x2="32" y2="53"/><line x1="13.8" y1="21.5" x2="50.2" y2="42.5"/><line x1="50.2" y1="21.5" x2="13.8" y2="42.5"/>
+<line x1="32" y1="11" x2="27" y2="16"/><line x1="32" y1="11" x2="37" y2="16"/><line x1="32" y1="53" x2="27" y2="48"/><line x1="32" y1="53" x2="37" y2="48"/>
+<line x1="13.8" y1="21.5" x2="13.5" y2="28"/><line x1="13.8" y1="21.5" x2="20" y2="20"/><line x1="50.2" y1="21.5" x2="50.5" y2="28"/><line x1="50.2" y1="21.5" x2="44" y2="20"/>
+<line x1="13.8" y1="42.5" x2="13.5" y2="36"/><line x1="13.8" y1="42.5" x2="20" y2="44"/><line x1="50.2" y1="42.5" x2="50.5" y2="36"/><line x1="50.2" y1="42.5" x2="44" y2="44"/></g>
+<circle cx="32" cy="32" r="4" fill="#fff"/></svg>
+"""
+
 def write(path, content):
     full = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -1144,6 +1165,7 @@ def main():
     write("llms.txt", LLMS)
     write("CNAME", "trycoolizi.com\n")
     write("a7f3c920e84b41d6b5e0c1f8d23a9e74.txt", "a7f3c920e84b41d6b5e0c1f8d23a9e74\n")  # IndexNow key
+    write("favicon.svg", FAVICON_SVG)
     print("Built %d geo pages + root + 404 + sitemap + robots + llms + CNAME" % n)
     print("Geos:", ", ".join(g["code"] for g in GEOS))
 
