@@ -158,6 +158,19 @@ section{padding:46px 0}
 .rev-card p{margin:0;font-size:14px;color:var(--ink2)}
 .rev-card .meta{margin-top:9px;font-size:11.5px;color:var(--mut);display:flex;gap:12px}
 
+/* legit / scam objection-handler */
+.legit{background:linear-gradient(180deg,#fff,#fff5f2)}
+.legit .sec-head .kick{color:var(--warn)}
+.legit-box{max-width:760px;margin:0 auto;background:#fff;border:1px solid #ffd9cf;border-left:5px solid var(--warn);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow2)}
+.legit-box .verdict{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:14px;line-height:1.35}
+.legit-box ul{list-style:none;padding:0;margin:0 0 14px}
+.legit-box li{display:flex;gap:10px;padding:7px 0;font-size:15px;color:var(--ink2);align-items:flex-start;border-bottom:1px solid var(--line2)}
+.legit-box li:last-of-type{border-bottom:0}
+.legit-box li .li-ic{flex:0 0 auto;font-weight:800;font-size:15px;margin-top:1px}
+.legit-box li.ok .li-ic{color:var(--mint)} .legit-box li.warn .li-ic{color:var(--warn)}
+.legit-box .bottom{font-size:15px;color:var(--ink);background:var(--bg3);border-radius:10px;padding:12px 15px;margin:0 0 16px}
+.legit-box .btn{max-width:none}
+
 /* guarantee */
 .guarantee{text-align:center}
 .guarantee .seal{width:128px;height:128px;border-radius:50%;margin:0 auto 16px;display:grid;place-content:center;text-align:center;

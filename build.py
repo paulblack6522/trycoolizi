@@ -39,7 +39,7 @@ GEOS = []
 GEOS.append(dict(
  code="en", lang="en-GB", hreflang="en-gb", cc="GB", og="en_GB", cur=GBP, curcode="GBP",
  c="9578", s1="try-uk", rating="4.8", reviews=8940, lang_label="English",
- title="Coolizi Portable AC Review » Honest 2026 Test, Price & Where to Buy ✓",
+ title="Coolizi Review 2026 » Honest Test, Real Price & Is It Worth It?",
  desc="Is the Coolizi portable air conditioner worth it? ✓ Our hands-on 2026 review: cooling, price, real owner reviews & the official 50% OFF deal. Read before you buy.",
  keywords="coolizi, coolizi review, coolizi reviews, coolizi portable ac, coolizi air conditioner, coolizi portable air conditioner, coolizi price, coolizi cost, coolizi uk, is coolizi legit, coolizi scam, coolizi complaints, how to use coolizi, coolizi buy, where to buy coolizi, coolizi discount, coolizi deal, coolizi experience, coolizi real reviews, coolizi mini ac, coolizi 2026, coolizi test",
  eyebrow="Coolizi™ Review · Updated "+PRETTY,
@@ -111,7 +111,7 @@ GEOS.append(dict(
 GEOS.append(dict(
  code="de", lang="de", hreflang="de", cc="DE", og="de_DE", cur=EURa, curcode="EUR",
  c="9553", s1="try-de", rating="4.8", reviews=8910, lang_label="Deutsch",
- title="Coolizi Erfahrungen » Ehrlicher Test 2026, Preis & wo kaufen ✓",
+ title="Coolizi Erfahrungen 2026 » Ehrlicher Test, Preis & Fazit",
  desc="Lohnt sich die Coolizi mobile Klimaanlage? ✓ Unser Praxis-Test 2026: Kühlung, Preis, echte Kundenbewertungen & der offizielle 50%-Rabatt. Jetzt lesen, bevor Sie kaufen.",
  keywords="coolizi, coolizi erfahrungen, coolizi test, coolizi bewertung, coolizi mobile klimaanlage, coolizi klimagerät, coolizi preis, coolizi kaufen, coolizi erfahrung, ist coolizi seriös, coolizi betrug, coolizi fake, coolizi kritik, wie funktioniert coolizi, coolizi rabatt, coolizi angebot, coolizi mini klimaanlage, coolizi 2026, coolizi deutschland, coolizi klimaanlage ohne abluftschlauch",
  eyebrow="Coolizi™ Test · Aktualisiert "+PRETTY,
@@ -183,7 +183,7 @@ GEOS.append(dict(
 GEOS.append(dict(
  code="fr", lang="fr", hreflang="fr", cc="FR", og="fr_FR", cur=EURa, curcode="EUR",
  c="9558", s1="try-fr", rating="4.8", reviews=8901, lang_label="Français",
- title="Coolizi Avis » Test honnête 2026, prix & où acheter ✓",
+ title="Coolizi Avis 2026 » Test Honnête, Prix & Verdict Final",
  desc="Le climatiseur portable Coolizi en vaut-il la peine ? ✓ Notre test 2026 : rafraîchissement, prix, vrais avis clients & la remise officielle de 50%. À lire avant d'acheter.",
  keywords="coolizi, coolizi avis, coolizi test, coolizi climatiseur portable, coolizi mini climatiseur, coolizi prix, coolizi acheter, coolizi arnaque, coolizi fiable, comment utiliser coolizi, coolizi promo, coolizi réduction, coolizi france, coolizi 2026, coolizi climatiseur mobile, avis coolizi, coolizi expérience, où acheter coolizi",
  eyebrow="Coolizi™ Avis · Mis à jour "+PRETTY,
@@ -255,7 +255,7 @@ GEOS.append(dict(
 GEOS.append(dict(
  code="it", lang="it", hreflang="it", cc="IT", og="it_IT", cur=EURb, curcode="EUR",
  c="9598", s1="try-it", rating="4.8", reviews=8192, lang_label="Italiano",
- title="Coolizi Recensioni » Test onesto 2026, prezzo e dove comprarlo ✓",
+ title="Coolizi Recensioni 2026 » Test Onesto, Prezzo & Verdetto",
  desc="Il condizionatore portatile Coolizi vale la pena? ✓ La nostra prova 2026: raffrescamento, prezzo, recensioni reali e lo sconto ufficiale del 50%. Leggi prima di comprare.",
  keywords="coolizi, coolizi recensioni, coolizi opinioni, coolizi condizionatore portatile, coolizi mini condizionatore, coolizi prezzo, coolizi comprare, coolizi truffa, coolizi funziona, come si usa coolizi, coolizi sconto, coolizi offerta, coolizi italia, coolizi 2026, recensioni coolizi, coolizi climatizzatore portatile, dove comprare coolizi",
  eyebrow="Coolizi™ Recensione · Aggiornato "+PRETTY,
@@ -327,7 +327,7 @@ GEOS.append(dict(
 GEOS.append(dict(
  code="es", lang="es", hreflang="es", cc="ES", og="es_ES", cur=EURa, curcode="EUR",
  c="9587", s1="try-es", rating="4.8", reviews=8921, lang_label="Español",
- title="Coolizi Opiniones » Análisis honesto 2026, precio y dónde comprar ✓",
+ title="Coolizi Opiniones 2026 » Análisis Honesto, Precio & Veredicto",
  desc="¿Merece la pena el aire acondicionado portátil Coolizi? ✓ Nuestra prueba 2026: enfriamiento, precio, opiniones reales y el descuento oficial del 50%. Léelo antes de comprar.",
  keywords="coolizi, coolizi opiniones, coolizi reseñas, coolizi aire acondicionado portátil, coolizi mini aire acondicionado, coolizi precio, coolizi comprar, coolizi estafa, coolizi funciona, cómo usar coolizi, coolizi descuento, coolizi oferta, coolizi españa, coolizi 2026, opiniones coolizi, coolizi climatizador portátil, dónde comprar coolizi",
  eyebrow="Coolizi™ Opinión · Actualizado "+PRETTY,
@@ -399,7 +399,7 @@ GEOS.append(dict(
 GEOS.append(dict(
  code="nl", lang="nl", hreflang="nl", cc="NL", og="nl_NL", cur=EURb, curcode="EUR",
  c="9590", s1="try-nl", rating="4.8", reviews=8119, lang_label="Nederlands",
- title="Coolizi Review » Eerlijke test 2026, prijs & waar te koop ✓",
+ title="Coolizi Review 2026 » Eerlijke Test, Prijs & Ons Oordeel",
  desc="Is de Coolizi draagbare airco de moeite waard? ✓ Onze test 2026: koeling, prijs, echte reviews & de officiële 50% korting. Lees dit voordat je koopt.",
  keywords="coolizi, coolizi review, coolizi ervaringen, coolizi draagbare airco, coolizi mini airco, coolizi prijs, coolizi kopen, coolizi oplichting, coolizi werkt, hoe werkt coolizi, coolizi korting, coolizi aanbieding, coolizi nederland, coolizi 2026, coolizi reviews, coolizi mobiele airco, waar coolizi kopen",
  eyebrow="Coolizi™ Review · Bijgewerkt "+PRETTY,
@@ -471,7 +471,7 @@ GEOS.append(dict(
 GEOS.append(dict(
  code="pt", lang="pt-PT", hreflang="pt", cc="PT", og="pt_PT", cur=EURa, curcode="EUR",
  c="9601", s1="try-pt", rating="4.8", reviews=8942, lang_label="Português",
- title="Coolizi Opiniões » Análise honesta 2026, preço e onde comprar ✓",
+ title="Coolizi Opiniões 2026 » Análise Honesta, Preço & Veredito",
  desc="O ar condicionado portátil Coolizi vale a pena? ✓ A nossa análise 2026: arrefecimento, preço, opiniões reais e o desconto oficial de 50%. Leia antes de comprar.",
  keywords="coolizi, coolizi opiniões, coolizi análise, coolizi ar condicionado portátil, coolizi mini ar condicionado, coolizi preço, coolizi comprar, coolizi fraude, coolizi funciona, como usar coolizi, coolizi desconto, coolizi promoção, coolizi portugal, coolizi 2026, opiniões coolizi, coolizi climatizador portátil, onde comprar coolizi",
  eyebrow="Coolizi™ Análise · Atualizado "+PRETTY,
@@ -543,7 +543,7 @@ GEOS.append(dict(
 GEOS.append(dict(
  code="el", lang="el", hreflang="el", cc="GR", og="el_GR", cur=EURa, curcode="EUR",
  c="9596", s1="try-gr", rating="4.9", reviews=20864, lang_label="Ελληνικά",
- title="Coolizi Κριτικές » Ειλικρινής δοκιμή 2026, τιμή & πού να αγοράσετε ✓",
+ title="Coolizi Κριτικές 2026 » Τίμιο Τεστ, Τιμή & Ετυμηγορία",
  desc="Αξίζει το φορητό κλιματιστικό Coolizi; ✓ Η δοκιμή μας 2026: ψύξη, τιμή, πραγματικές κριτικές & η επίσημη έκπτωση 50%. Διαβάστε πριν αγοράσετε.",
  keywords="coolizi, coolizi κριτικές, coolizi αξιολογήσεις, coolizi φορητό κλιματιστικό, coolizi mini κλιματιστικό, coolizi τιμή, coolizi αγορά, coolizi απάτη, coolizi λειτουργεί, πώς λειτουργεί coolizi, coolizi έκπτωση, coolizi προσφορά, coolizi ελλάδα, coolizi 2026, κριτικές coolizi, πού να αγοράσω coolizi",
  eyebrow="Coolizi™ Κριτική · Ενημερώθηκε "+PRETTY,
@@ -715,6 +715,66 @@ LEGAL = {
 }
 POLICY_KINDS = ["privacy", "terms", "disclosure", "contact"]
 
+# Bold scam-or-legit objection handler (targets 'scam/arnaque/seriös/truffa/estafa/oplichting/απάτη' queries)
+LEGIT = {
+ "en": dict(kick="Scam or legit? — straight answer", h2="Is Coolizi a Scam? Our Honest Verdict",
+   verdict="Verdict: Coolizi is a <b>real, legitimate product — NOT a scam.</b> But there's one thing you must know first.",
+   points=[("ok","It's a real company with a real product that actually ships — with tracked delivery."),
+           ("ok","Every order is covered by a <b>30-day money-back guarantee</b>, so your money is protected."),
+           ("ok","Backed by thousands of verified buyer reviews."),
+           ("warn","The catch: cheap fakes &amp; copycats are sold on random marketplaces. <b>Only buy from the official store</b> to get the real unit + the guarantee.")],
+   bottom="Bottom line: <b>legit and low-risk</b> thanks to the money-back guarantee. Just order from the official store below — never a random seller."),
+ "de": dict(kick="Betrug oder seriös? — Klare Antwort", h2="Ist Coolizi ein Betrug? Unser ehrliches Fazit",
+   verdict="Fazit: Coolizi ist ein <b>echtes, seriöses Produkt — KEIN Betrug.</b> Aber eines sollten Sie vorher wissen.",
+   points=[("ok","Echtes Unternehmen mit echtem Produkt, das tatsächlich geliefert wird — mit Sendungsverfolgung."),
+           ("ok","Jede Bestellung ist durch eine <b>30-Tage-Geld-zurück-Garantie</b> abgesichert — Ihr Geld ist geschützt."),
+           ("ok","Tausende verifizierte Kundenbewertungen."),
+           ("warn","Der Haken: Auf fremden Marktplätzen gibt es billige Fälschungen. <b>Nur im offiziellen Shop kaufen</b>, um das echte Gerät + die Garantie zu erhalten.")],
+   bottom="Unterm Strich: <b>seriös und risikoarm</b> dank der Geld-zurück-Garantie. Bestellen Sie nur über den offiziellen Shop unten — nicht bei fremden Händlern."),
+ "fr": dict(kick="Arnaque ou fiable ? — Réponse claire", h2="Coolizi est-il une arnaque ? Notre verdict honnête",
+   verdict="Verdict : Coolizi est un <b>produit réel et fiable — PAS une arnaque.</b> Mais il y a une chose à savoir d'abord.",
+   points=[("ok","Vraie entreprise, vrai produit réellement expédié — avec suivi de livraison."),
+           ("ok","Chaque commande est couverte par une <b>garantie satisfait ou remboursé de 30 jours</b> — votre argent est protégé."),
+           ("ok","Des milliers d'avis clients vérifiés."),
+           ("warn","Le piège : des contrefaçons bon marché circulent sur certaines marketplaces. <b>Achetez uniquement sur la boutique officielle</b> pour avoir le vrai produit + la garantie.")],
+   bottom="En résumé : <b>fiable et sans risque</b> grâce à la garantie. Commandez uniquement via la boutique officielle ci-dessous — pas chez un vendeur tiers."),
+ "it": dict(kick="Truffa o affidabile? — Risposta chiara", h2="Coolizi è una truffa? Il nostro verdetto onesto",
+   verdict="Verdetto: Coolizi è un <b>prodotto reale e affidabile — NON una truffa.</b> Ma c'è una cosa da sapere prima.",
+   points=[("ok","Azienda reale, prodotto reale che viene davvero spedito — con tracciamento."),
+           ("ok","Ogni ordine è coperto da una <b>garanzia soddisfatti o rimborsati di 30 giorni</b> — i tuoi soldi sono protetti."),
+           ("ok","Migliaia di recensioni verificate."),
+           ("warn","Il trucco: su certi marketplace girano imitazioni economiche. <b>Acquista solo dallo store ufficiale</b> per avere il prodotto vero + la garanzia.")],
+   bottom="In sintesi: <b>affidabile e a basso rischio</b> grazie alla garanzia. Ordina solo dallo store ufficiale qui sotto — non da venditori terzi."),
+ "es": dict(kick="¿Estafa o fiable? — Respuesta clara", h2="¿Coolizi es una estafa? Nuestro veredicto honesto",
+   verdict="Veredicto: Coolizi es un <b>producto real y fiable — NO una estafa.</b> Pero hay algo que debes saber antes.",
+   points=[("ok","Empresa real, producto real que de verdad se envía — con seguimiento."),
+           ("ok","Cada pedido está cubierto por una <b>garantía de devolución de 30 días</b> — tu dinero está protegido."),
+           ("ok","Miles de opiniones verificadas."),
+           ("warn","El truco: hay imitaciones baratas en algunos marketplaces. <b>Compra solo en la tienda oficial</b> para recibir el producto real + la garantía.")],
+   bottom="En resumen: <b>fiable y de bajo riesgo</b> gracias a la garantía. Compra solo en la tienda oficial de abajo — no a un vendedor cualquiera."),
+ "nl": dict(kick="Oplichting of betrouwbaar? — Duidelijk antwoord", h2="Is Coolizi oplichting? Ons eerlijke oordeel",
+   verdict="Oordeel: Coolizi is een <b>echt, betrouwbaar product — GEEN oplichting.</b> Maar er is één ding dat je eerst moet weten.",
+   points=[("ok","Echt bedrijf, echt product dat daadwerkelijk wordt verzonden — met tracking."),
+           ("ok","Elke bestelling valt onder een <b>30-dagen niet-goed-geld-terug-garantie</b> — je geld is beschermd."),
+           ("ok","Duizenden geverifieerde reviews."),
+           ("warn","De adder: op sommige marktplaatsen wordt goedkope namaak verkocht. <b>Koop alleen in de officiële winkel</b> voor het echte product + de garantie.")],
+   bottom="Kort gezegd: <b>betrouwbaar en weinig risico</b> dankzij de garantie. Bestel alleen via de officiële winkel hieronder — niet bij een willekeurige verkoper."),
+ "pt": dict(kick="Fraude ou fiável? — Resposta clara", h2="O Coolizi é uma fraude? O nosso veredicto honesto",
+   verdict="Veredicto: o Coolizi é um <b>produto real e fiável — NÃO é fraude.</b> Mas há algo que deve saber primeiro.",
+   points=[("ok","Empresa real, produto real que é mesmo enviado — com rastreio."),
+           ("ok","Cada encomenda tem uma <b>garantia de devolução de 30 dias</b> — o seu dinheiro está protegido."),
+           ("ok","Milhares de avaliações verificadas."),
+           ("warn","O senão: há imitações baratas em alguns marketplaces. <b>Compre apenas na loja oficial</b> para receber o produto verdadeiro + a garantia.")],
+   bottom="Resumindo: <b>fiável e de baixo risco</b> graças à garantia. Compre apenas na loja oficial abaixo — não a um vendedor qualquer."),
+ "el": dict(kick="Απάτη ή αξιόπιστο; — Ξεκάθαρη απάντηση", h2="Είναι το Coolizi απάτη; Η τίμια ετυμηγορία μας",
+   verdict="Ετυμηγορία: το Coolizi είναι <b>πραγματικό, αξιόπιστο προϊόν — ΟΧΙ απάτη.</b> Αλλά υπάρχει κάτι που πρέπει να ξέρετε πρώτα.",
+   points=[("ok","Πραγματική εταιρεία, πραγματικό προϊόν που όντως αποστέλλεται — με παρακολούθηση."),
+           ("ok","Κάθε παραγγελία καλύπτεται από <b>εγγύηση επιστροφής χρημάτων 30 ημερών</b> — τα χρήματά σας προστατεύονται."),
+           ("ok","Χιλιάδες επαληθευμένες κριτικές."),
+           ("warn","Η παγίδα: σε ορισμένα marketplaces κυκλοφορούν φθηνές απομιμήσεις. <b>Αγοράστε μόνο από το επίσημο κατάστημα</b> για το γνήσιο προϊόν + την εγγύηση.")],
+   bottom="Συμπέρασμα: <b>αξιόπιστο και χαμηλού ρίσκου</b> χάρη στην εγγύηση. Αγοράστε μόνο από το επίσημο κατάστημα παρακάτω — όχι από τυχαίο πωλητή."),
+}
+
 def build_bundles(g):
     cur, L = g["cur"], g["bundle_labels"]
     rows = [
@@ -750,6 +810,13 @@ def build_reviews(g):
             '<div class="meta"><span>%s</span></div></div>'
             % (face_av(name, idx), E(name), E(name), E(city), E(g["verified"]), E(text), "%dd" % days)); idx += 1
     return "\n".join(cards)
+
+def build_legit_points(g):
+    out = []
+    for t, txt in LEGIT[g["code"]]["points"]:
+        out.append('<li class="%s"><span class="li-ic">%s</span><span>%s</span></li>'
+                   % (t, "✓" if t == "ok" else "⚠", txt))
+    return "".join(out)
 
 def build_faq(g):
     out = []
@@ -893,6 +960,8 @@ def render_page(g, geos):
       "BUNDLES": build_bundles(g), "OFFERCTA": E(g["offer_cta"]), "PAYNOTE": E(g["pay_note"]), "GUARMINI": E(g["guarantee_mini"]),
       "RV_KICK": E(g["reviews_kick"]), "RV_H2": E(g["reviews_h2"]),
       "REVCARDS": build_reviews(g),
+      "LEGIT_KICK": E(LEGIT[g["code"]]["kick"]), "LEGIT_H2": E(LEGIT[g["code"]]["h2"]),
+      "LEGIT_VERDICT": LEGIT[g["code"]]["verdict"], "LEGIT_POINTS": build_legit_points(g), "LEGIT_BOTTOM": LEGIT[g["code"]]["bottom"],
       "GU_KICK": E(g["guar_kick"]), "GU_H2": E(g["guar_h2"]),
       "SEAL1": E(g["guar_seal"][0]), "SEAL2": E(g["guar_seal"][1]), "GU_P": E(g["guar_p"]),
       "FQ_KICK": E(g["faq_kick"]), "FQ_H2": E(g["faq_h2"]), "FAQ": build_faq(g),
@@ -1029,6 +1098,17 @@ TEMPLATE = r"""<!DOCTYPE html>
     </div>
   </div>
   <div class="rev-grid">{{REVCARDS}}</div>
+</div></section>
+
+<!-- SCAM / LEGIT -->
+<section class="legit"><div class="wrap">
+  <div class="sec-head"><span class="kick">⚠️ {{LEGIT_KICK}}</span><h2>{{LEGIT_H2}}</h2></div>
+  <div class="legit-box reveal">
+    <div class="verdict">{{LEGIT_VERDICT}}</div>
+    <ul>{{LEGIT_POINTS}}</ul>
+    <div class="bottom">{{LEGIT_BOTTOM}}</div>
+    <a class="btn pulse js-cta" href="#">{{CTA}} <span class="arw">→</span></a>
+  </div>
 </div></section>
 
 <!-- GUARANTEE -->
