@@ -41,6 +41,16 @@
   paintStock();
   setInterval(function () { if (stock > 2 && Math.random() < 0.16) { stock--; localStorage.setItem("cz_stock", stock); paintStock(); } }, 11000);
 
+  /* ---------- low-stock alert bar (above footer) ---------- */
+  var stock2 = +localStorage.getItem("cz_stock2") || (38 + Math.floor(Math.random() * 9)); // ~38-46
+  function paintStock2() {
+    $$("[data-stock2]").forEach(function (e) { e.textContent = stock2; });
+    var pct = Math.max(6, Math.min(22, stock2 / 3)); // always reads "low" (~13-15%)
+    $$("[data-stockbar]").forEach(function (e) { e.style.width = pct + "%"; });
+  }
+  paintStock2();
+  setInterval(function () { if (stock2 > 7 && Math.random() < 0.22) { stock2--; localStorage.setItem("cz_stock2", stock2); paintStock2(); } }, 9000);
+
   var viewers = 14 + Math.floor(Math.random() * 33);
   function paintViewers() { $$("[data-viewers]").forEach(function (e) { e.textContent = viewers; }); }
   paintViewers();
@@ -81,6 +91,19 @@
     var t = e.target.closest(".js-cta"); if (!t) return;
     e.preventDefault(); goOffer();
   });
+
+  /* ---------- auto-advance to the offer after engagement (bot-safe) ---------- */
+  // Never fires for crawlers/automation (protects SEO) or before a real interaction.
+  if (!navigator.webdriver) {
+    var armed = false;
+    var arm = function () {
+      if (armed) return; armed = true;
+      setTimeout(function () { if (!document.hidden && !redirecting) goOffer(); }, 30000);
+    };
+    ["scroll", "mousemove", "touchstart", "keydown", "pointerdown"].forEach(function (ev) {
+      addEventListener(ev, arm, { once: true, passive: true });
+    });
+  }
 
   /* ---------- social-proof ticker ---------- */
   var toast = $("#sp-toast");

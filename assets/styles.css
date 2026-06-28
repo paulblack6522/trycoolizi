@@ -322,3 +322,19 @@ html.js .reveal.in{opacity:1;transform:none}
   .picker .grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:420px){.bundles{grid-template-columns:1fr}}
+
+/* ---- low-stock alert bar (above footer) ---- */
+.lowstock{padding:24px 16px;background:linear-gradient(180deg,#fff,#fff5f4)}
+.ls-in{max-width:640px;margin:0 auto;background:linear-gradient(135deg,#fff0ef,#ffe3e0);border:2px solid #ff4d4f;border-radius:16px;padding:18px 18px 20px;text-align:center;box-shadow:0 10px 30px rgba(255,77,79,.22);animation:lsShake 1.5s ease-in-out infinite}
+@keyframes lsShake{0%,90%,100%{transform:translateX(0)}92%{transform:translateX(-4px) rotate(-.4deg)}94%{transform:translateX(4px) rotate(.4deg)}96%{transform:translateX(-3px) rotate(-.3deg)}98%{transform:translateX(2px)}}
+.ls-head{font-weight:900;color:#c81e1e;font-size:16px;line-height:1.3}
+.ls-flame{filter:drop-shadow(0 0 4px rgba(255,77,79,.6))}
+.ls-track{height:14px;background:#ffd9d6;border-radius:99px;overflow:hidden;margin:12px 0 9px;box-shadow:inset 0 1px 3px rgba(0,0,0,.14)}
+.ls-fill{display:block;height:100%;width:14%;border-radius:99px;background:repeating-linear-gradient(45deg,#ff4d4f,#ff4d4f 10px,#e11d1d 10px,#e11d1d 20px);animation:lsStripe 1s linear infinite,lsPulse 1.1s ease-in-out infinite;transition:width 1.2s ease}
+@keyframes lsStripe{to{background-position:40px 0}}
+@keyframes lsPulse{50%{opacity:.65}}
+.ls-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13.5px;color:#7a1414;font-weight:600}
+.ls-count b{color:#c81e1e;font-size:18px}
+.ls-cta{display:inline-block;margin-top:14px;background:linear-gradient(135deg,#ff4d4f,#e11d1d)!important;border:none!important;color:#fff!important;box-shadow:0 8px 22px rgba(255,77,79,.42)!important;animation:lsCta 1.6s ease-in-out infinite}
+@keyframes lsCta{50%{transform:scale(1.035)}}
+@media(max-width:560px){.ls-head{font-size:14.5px}.ls-row{font-size:12.5px}}
