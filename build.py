@@ -110,7 +110,7 @@ GEOS.append(dict(
 
 GEOS.append(dict(
  code="de", lang="de", hreflang="de", cc="DE", og="de_DE", cur=EURa, curcode="EUR",
- c="9553", s1="try-de", rating="4.8", reviews=8910, lang_label="Deutsch",
+ c="9540", s1="try-de", rating="4.8", reviews=8910, lang_label="Deutsch",
  title="Coolizi Erfahrungen: Seriös oder Abzocke? Ehrlicher Test",
  desc="Ist Coolizi seriös oder Abzocke? Unser ehrlicher Test 2026: Kühlleistung, echte Kundenbewertungen, Preis & der offizielle 70%-Rabatt. Das müssen Sie vor dem Kauf wissen.",
  keywords="coolizi, coolizi erfahrungen, coolizi test, coolizi bewertung, coolizi mobile klimaanlage, coolizi klimagerät, coolizi preis, coolizi kaufen, coolizi erfahrung, ist coolizi seriös, coolizi betrug, coolizi fake, coolizi kritik, wie funktioniert coolizi, coolizi rabatt, coolizi angebot, coolizi mini klimaanlage, coolizi 2026, coolizi deutschland, coolizi klimaanlage ohne abluftschlauch",
