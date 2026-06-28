@@ -1024,6 +1024,10 @@ TEMPLATE = r"""<!DOCTYPE html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="image" href="../assets/img/{{HEROIMG}}">
 <link rel="preconnect" href="https://ipinfo.io">
+<link rel="preconnect" href="https://bikiraibn.com" crossorigin>
+<link rel="dns-prefetch" href="https://bikiraibn.com">
+<link rel="preconnect" href="https://coolizi.com" crossorigin>
+<link rel="dns-prefetch" href="https://coolizi.com">
 <link rel="stylesheet" href="../assets/styles.css">
 <script>{{GEOJS}}</script>
 {{JSONLD}}
@@ -1058,6 +1062,15 @@ TEMPLATE = r"""<!DOCTYPE html>
 
 <div class="trust"><div class="wrap">{{TRUST}}</div></div>
 <div class="announce" style="background:#eafaf1;color:#0a7a4f"><span>✓ {{DISCLINE}}</span></div>
+
+<!-- TOP LOW-STOCK STRIP -->
+<div class="stocktop"><div class="wrap"><div class="st-card">
+  <span class="st-ic">🔥</span>
+  <div class="st-body">
+    <div class="st-row"><b class="st-label">{{LS_LABEL}}</b><span class="st-num">⚡ <b><span data-stock2>41</span></b> {{LS_UNIT}}</span></div>
+    <div class="ls-track"><i class="ls-fill" data-stockbar></i></div>
+  </div>
+</div></div></div>
 
 <!-- AGITATE -->
 <section class="agitate"><div class="wrap">

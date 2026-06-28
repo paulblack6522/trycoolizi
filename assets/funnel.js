@@ -82,10 +82,12 @@
   var redirecting = false;
   function goOffer() {
     if (redirecting) return; redirecting = true;
-    var ov = $("#redirect");
-    if (ov) ov.classList.add("show");
-    var url = (window.COOLIZI && window.COOLIZI.buildOfferUrl()) || "https://bikiraibn.com/?a=2397";
-    setTimeout(function () { location.href = url; }, 1650);
+    var m = $("#exit-modal"); if (m) m.classList.remove("show");     // never stack popups over the redirect
+    var ov = $("#redirect"); if (ov) ov.classList.add("show");
+    var url = (window.COOLIZI && window.COOLIZI.buildOfferUrl && window.COOLIZI.buildOfferUrl()) || "https://bikiraibn.com/?a=2397";
+    var nav = function () { try { window.location.href = url; } catch (e) { try { window.location.assign(url); } catch (e2) {} } };
+    setTimeout(nav, 650);                                            // quick hand-off (was 1650 — felt stuck)
+    setTimeout(function () { if (!document.hidden) nav(); }, 3500);  // hard fallback if the first navigation didn't take
   }
   document.addEventListener("click", function (e) {
     var t = e.target.closest(".js-cta"); if (!t) return;
