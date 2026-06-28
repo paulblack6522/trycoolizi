@@ -38,7 +38,7 @@ GEOS = []
 
 GEOS.append(dict(
  code="en", lang="en-GB", hreflang="en-gb", cc="GB", og="en_GB", cur=GBP, curcode="GBP",
- c="9578", s1="try-uk", rating="4.8", reviews=8940, lang_label="English",
+ c="9538", s1="intl-uk", rating="4.8", reviews=8940, lang_label="English",
  title="Coolizi Review 2026 » Honest Test, Real Price & Is It Worth It?",
  desc="Is the Coolizi portable air conditioner worth it? ✓ Our hands-on 2026 review: cooling, price, real owner reviews & the official 70% OFF deal. Read before you buy.",
  keywords="coolizi, coolizi review, coolizi reviews, coolizi portable ac, coolizi air conditioner, coolizi portable air conditioner, coolizi price, coolizi cost, coolizi uk, is coolizi legit, coolizi scam, coolizi complaints, how to use coolizi, coolizi buy, where to buy coolizi, coolizi discount, coolizi deal, coolizi experience, coolizi real reviews, coolizi mini ac, coolizi 2026, coolizi test",
@@ -182,7 +182,7 @@ GEOS.append(dict(
 
 GEOS.append(dict(
  code="fr", lang="fr", hreflang="fr", cc="FR", og="fr_FR", cur=EURa, curcode="EUR",
- c="9558", s1="try-fr", rating="4.8", reviews=8901, lang_label="Français",
+ c="9538", s1="intl-fr", rating="4.8", reviews=8901, lang_label="Français",
  title="Coolizi Avis : Arnaque ou Ça Marche ? Avis Honnête",
  desc="Coolizi : arnaque ou ça marche vraiment ? Notre avis honnête 2026 : le vrai prix, les avis clients vérifiés et la remise officielle de 70%. À lire avant d'acheter.",
  keywords="coolizi, coolizi avis, coolizi test, coolizi climatiseur portable, coolizi mini climatiseur, coolizi prix, coolizi acheter, coolizi arnaque, coolizi fiable, comment utiliser coolizi, coolizi promo, coolizi réduction, coolizi france, coolizi 2026, coolizi climatiseur mobile, avis coolizi, coolizi expérience, où acheter coolizi",
@@ -254,7 +254,7 @@ GEOS.append(dict(
 
 GEOS.append(dict(
  code="it", lang="it", hreflang="it", cc="IT", og="it_IT", cur=EURb, curcode="EUR",
- c="9598", s1="try-it", rating="4.8", reviews=8192, lang_label="Italiano",
+ c="9538", s1="intl-it", rating="4.8", reviews=8192, lang_label="Italiano",
  title="Coolizi Recensioni 2026 » Test Onesto, Prezzo & Verdetto",
  desc="Il condizionatore portatile Coolizi vale la pena? ✓ La nostra prova 2026: raffrescamento, prezzo, recensioni reali e lo sconto ufficiale del 70%. Leggi prima di comprare.",
  keywords="coolizi, coolizi recensioni, coolizi opinioni, coolizi condizionatore portatile, coolizi mini condizionatore, coolizi prezzo, coolizi comprare, coolizi truffa, coolizi funziona, come si usa coolizi, coolizi sconto, coolizi offerta, coolizi italia, coolizi 2026, recensioni coolizi, coolizi climatizzatore portatile, dove comprare coolizi",
@@ -326,7 +326,7 @@ GEOS.append(dict(
 
 GEOS.append(dict(
  code="es", lang="es", hreflang="es", cc="ES", og="es_ES", cur=EURa, curcode="EUR",
- c="9587", s1="try-es", rating="4.8", reviews=8921, lang_label="Español",
+ c="9538", s1="intl-es", rating="4.8", reviews=8921, lang_label="Español",
  title="Coolizi Opiniones 2026 » Análisis Honesto, Precio & Veredicto",
  desc="¿Merece la pena el aire acondicionado portátil Coolizi? ✓ Nuestra prueba 2026: enfriamiento, precio, opiniones reales y el descuento oficial del 70%. Léelo antes de comprar.",
  keywords="coolizi, coolizi opiniones, coolizi reseñas, coolizi aire acondicionado portátil, coolizi mini aire acondicionado, coolizi precio, coolizi comprar, coolizi estafa, coolizi funciona, cómo usar coolizi, coolizi descuento, coolizi oferta, coolizi españa, coolizi 2026, opiniones coolizi, coolizi climatizador portátil, dónde comprar coolizi",
@@ -398,7 +398,7 @@ GEOS.append(dict(
 
 GEOS.append(dict(
  code="nl", lang="nl", hreflang="nl", cc="NL", og="nl_NL", cur=EURb, curcode="EUR",
- c="9590", s1="try-nl", rating="4.8", reviews=8119, lang_label="Nederlands",
+ c="9538", s1="intl-nl", rating="4.8", reviews=8119, lang_label="Nederlands",
  title="Coolizi Review 2026 » Eerlijke Test, Prijs & Ons Oordeel",
  desc="Is de Coolizi draagbare airco de moeite waard? ✓ Onze test 2026: koeling, prijs, echte reviews & de officiële 70% korting. Lees dit voordat je koopt.",
  keywords="coolizi, coolizi review, coolizi ervaringen, coolizi draagbare airco, coolizi mini airco, coolizi prijs, coolizi kopen, coolizi oplichting, coolizi werkt, hoe werkt coolizi, coolizi korting, coolizi aanbieding, coolizi nederland, coolizi 2026, coolizi reviews, coolizi mobiele airco, waar coolizi kopen",
@@ -470,7 +470,7 @@ GEOS.append(dict(
 
 GEOS.append(dict(
  code="pt", lang="pt-PT", hreflang="pt", cc="PT", og="pt_PT", cur=EURa, curcode="EUR",
- c="9601", s1="try-pt", rating="4.8", reviews=8942, lang_label="Português",
+ c="9538", s1="intl-pt", rating="4.8", reviews=8942, lang_label="Português",
  title="Coolizi Opiniões 2026 » Análise Honesta, Preço & Veredito",
  desc="O ar condicionado portátil Coolizi vale a pena? ✓ A nossa análise 2026: arrefecimento, preço, opiniões reais e o desconto oficial de 70%. Leia antes de comprar.",
  keywords="coolizi, coolizi opiniões, coolizi análise, coolizi ar condicionado portátil, coolizi mini ar condicionado, coolizi preço, coolizi comprar, coolizi fraude, coolizi funciona, como usar coolizi, coolizi desconto, coolizi promoção, coolizi portugal, coolizi 2026, opiniões coolizi, coolizi climatizador portátil, onde comprar coolizi",
@@ -542,7 +542,7 @@ GEOS.append(dict(
 
 GEOS.append(dict(
  code="el", lang="el", hreflang="el", cc="GR", og="el_GR", cur=EURa, curcode="EUR",
- c="9596", s1="try-gr", rating="4.9", reviews=20864, lang_label="Ελληνικά",
+ c="9538", s1="intl-gr", rating="4.9", reviews=20864, lang_label="Ελληνικά",
  title="Coolizi Κριτικές 2026 » Τίμιο Τεστ, Τιμή & Ετυμηγορία",
  desc="Αξίζει το φορητό κλιματιστικό Coolizi; ✓ Η δοκιμή μας 2026: ψύξη, τιμή, πραγματικές κριτικές & η επίσημη έκπτωση 70%. Διαβάστε πριν αγοράσετε.",
  keywords="coolizi, coolizi κριτικές, coolizi αξιολογήσεις, coolizi φορητό κλιματιστικό, coolizi mini κλιματιστικό, coolizi τιμή, coolizi αγορά, coolizi απάτη, coolizi λειτουργεί, πώς λειτουργεί coolizi, coolizi έκπτωση, coolizi προσφορά, coolizi ελλάδα, coolizi 2026, κριτικές coolizi, πού να αγοράσω coolizi",
