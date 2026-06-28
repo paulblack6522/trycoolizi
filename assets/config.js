@@ -2,10 +2,24 @@
 (function () {
   "use strict";
 
-  // ---- OFFER ----
-  // Network base; per-page window.GEO supplies c=<creative> and s1=try-<geo>.
+  // ============ OFFER LINKS — EDIT HERE TO CHANGE WHERE EACH GEO'S "BUY" BUTTON SENDS TRAFFIC ============
+  // To change an offer: edit the "c" (creative / offer id from the network) for a geo below, then commit.
+  // It goes LIVE in ~1 minute, no rebuild. Only change "s1" if the network tells you to.
+  // Final link = AFF_BASE + "&c=<c>&s1=<s1>".  AFF_BASE = the network + your affiliate id (a=2397).
   var AFF_BASE = "https://bikiraibn.com/?a=2397";
-  var IPINFO_TOKEN = "fcc8c88c9a040a"; // primary geo provider; ipwho.is is keyless fallback
+  var OFFERS = {
+    //  geo :  { c: "<creative / offer id>",  s1: "<tracking sub-id>" }
+    "en": { c: "9538", s1: "intl-uk" },   // UK / English
+    "de": { c: "9540", s1: "try-de"  },   // DE / AT / CH
+    "fr": { c: "9538", s1: "intl-fr" },   // FR / BE
+    "it": { c: "9538", s1: "intl-it" },   // Italy
+    "es": { c: "9538", s1: "intl-es" },   // Spain
+    "nl": { c: "9538", s1: "intl-nl" },   // Netherlands
+    "pt": { c: "9538", s1: "intl-pt" },   // Portugal
+    "el": { c: "9538", s1: "intl-gr" }    // Greece
+  };
+  // ======================================================================================================
+  var IPINFO_TOKEN = "fcc8c88c9a040a"; // geo provider for the social-proof ticker (ipwho.is is the fallback)
 
   // ---- capture inbound click-ids ONCE (first-touch) ----
   var TRACK_KEYS = ["gclid", "fbclid", "ttclid", "msclkid", "utm_source", "utm_campaign", "utm_medium", "s1", "s2"];
@@ -26,9 +40,12 @@
   // ---- build the outbound affiliate URL (call at click time) ----
   function buildOfferUrl() {
     var g = window.GEO || {};
+    var off = (OFFERS && OFFERS[g.code]) || {};   // central OFFERS wins; page-baked value is a safe fallback
+    var c = off.c || g.c;
+    var s1 = off.s1 || g.s1 || ("try-" + (g.code || "xx"));
     var u = new URL(AFF_BASE);
-    if (g.c) u.searchParams.set("c", g.c);
-    u.searchParams.set("s1", g.s1 || ("try-" + (g.code || "xx")));
+    if (c) u.searchParams.set("c", c);
+    u.searchParams.set("s1", s1);
     // pass any paid click-id into s2 for later reconciliation (ignored harmlessly if unused)
     var t = getTrack();
     var clickid = t.gclid || t.fbclid || t.ttclid || t.msclkid;
