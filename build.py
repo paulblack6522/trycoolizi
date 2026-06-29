@@ -822,6 +822,34 @@ LOWSTOCK = {
  "el": dict(label="⚠️ ΣΧΕΔΟΝ ΕΞΑΝΤΛΗΘΗΚΕ — έως -70% μόνο σήμερα", sub="Φεύγει γρήγορα σε αυτή την τιμή", unit="σε απόθεμα", cta="Το θέλω πριν τελειώσει »"),
 }
 
+# Bridge / offer-switch modal: Coolizi sold out -> AiraBreeze (grounded in AiraBreeze's real "up to 75% off + free shipping + money-back").
+BRIDGE = {
+ "en": dict(badge="COOLIZI · STOCK UPDATE", h="Coolizi is sold out", sub="Shoppers are switching to AiraBreeze — and right now it's cheaper.",
+   c1="Cools faster", c2="Free shipping", c3="Money-back", pct="−75%", deal="Up to 75% off — ends in",
+   stock="Only {n} left at this price", cta="Get the AiraBreeze deal", no="No thanks — I'll risk paying full price"),
+ "de": dict(badge="COOLIZI · BESTANDS-UPDATE", h="Coolizi ist ausverkauft", sub="Käufer steigen jetzt auf AiraBreeze um – und gerade ist es günstiger.",
+   c1="Kühlt schneller", c2="Gratis Versand", c3="Geld-zurück", pct="−75%", deal="Bis zu 75% Rabatt – endet in",
+   stock="Nur noch {n} zu diesem Preis", cta="AiraBreeze-Angebot sichern", no="Nein danke – ich zahle lieber den vollen Preis"),
+ "fr": dict(badge="COOLIZI · STOCK", h="Coolizi est en rupture de stock", sub="Les acheteurs passent à AiraBreeze – et en ce moment, c'est moins cher.",
+   c1="Refroidit plus vite", c2="Livraison offerte", c3="Satisfait ou remboursé", pct="−75%", deal="Jusqu'à 75% de remise – fin dans",
+   stock="Plus que {n} à ce prix", cta="Profiter de l'offre AiraBreeze", no="Non merci – je préfère payer plein tarif"),
+ "it": dict(badge="COOLIZI · DISPONIBILITÀ", h="Coolizi è esaurito", sub="Gli acquirenti stanno passando ad AiraBreeze – e ora costa meno.",
+   c1="Raffredda prima", c2="Spedizione gratis", c3="Soddisfatti o rimborsati", pct="−75%", deal="Fino al 75% di sconto – finisce tra",
+   stock="Solo {n} a questo prezzo", cta="Approfitta dell'offerta AiraBreeze", no="No grazie – preferisco pagare il prezzo pieno"),
+ "es": dict(badge="COOLIZI · STOCK", h="Coolizi está agotado", sub="Los compradores se están pasando a AiraBreeze – y ahora es más barato.",
+   c1="Enfría antes", c2="Envío gratis", c3="Devolución garantizada", pct="−75%", deal="Hasta 75% de descuento – termina en",
+   stock="Solo quedan {n} a este precio", cta="Conseguir la oferta AiraBreeze", no="No gracias – prefiero pagar el precio completo"),
+ "nl": dict(badge="COOLIZI · VOORRAAD", h="Coolizi is uitverkocht", sub="Kopers stappen nu over op AiraBreeze – en het is nu goedkoper.",
+   c1="Koelt sneller", c2="Gratis verzending", c3="Niet-goed-geld-terug", pct="−75%", deal="Tot 75% korting – eindigt over",
+   stock="Nog maar {n} tegen deze prijs", cta="AiraBreeze-aanbieding pakken", no="Nee bedankt – ik betaal liever de volle prijs"),
+ "pt": dict(badge="COOLIZI · STOCK", h="Coolizi está esgotado", sub="Os compradores estão a mudar para a AiraBreeze – e agora está mais barato.",
+   c1="Arrefece mais rápido", c2="Portes grátis", c3="Satisfação garantida", pct="−75%", deal="Até 75% de desconto – termina em",
+   stock="Só restam {n} a este preço", cta="Aproveitar a oferta AiraBreeze", no="Não obrigado – prefiro pagar o preço total"),
+ "el": dict(badge="COOLIZI · ΑΠΟΘΕΜΑ", h="Το Coolizi εξαντλήθηκε", sub="Οι αγοραστές στρέφονται στο AiraBreeze – και τώρα είναι φθηνότερο.",
+   c1="Ψύχει πιο γρήγορα", c2="Δωρεάν αποστολή", c3="Εγγύηση επιστροφής", pct="−75%", deal="Έως 75% έκπτωση – λήγει σε",
+   stock="Μόνο {n} σε αυτή την τιμή", cta="Απόκτησε την προσφορά AiraBreeze", no="Όχι ευχαριστώ – θα πληρώσω την πλήρη τιμή"),
+}
+
 def build_legit_points(g):
     out = []
     for t, txt in LEGIT[g["code"]]["points"]:
@@ -975,6 +1003,11 @@ def render_page(g, geos):
       "LEGIT_VERDICT": LEGIT[g["code"]]["verdict"], "LEGIT_POINTS": build_legit_points(g), "LEGIT_BOTTOM": LEGIT[g["code"]]["bottom"],
       "LS_LABEL": E(LOWSTOCK[g["code"]]["label"]), "LS_SUB": E(LOWSTOCK[g["code"]]["sub"]),
       "LS_UNIT": E(LOWSTOCK[g["code"]]["unit"]), "LS_CTA": E(LOWSTOCK[g["code"]]["cta"]),
+      "BR_BADGE": E(BRIDGE[g["code"]]["badge"]), "BR_H": E(BRIDGE[g["code"]]["h"]), "BR_SUB": E(BRIDGE[g["code"]]["sub"]),
+      "BR_C1": E(BRIDGE[g["code"]]["c1"]), "BR_C2": E(BRIDGE[g["code"]]["c2"]), "BR_C3": E(BRIDGE[g["code"]]["c3"]),
+      "BR_PCT": E(BRIDGE[g["code"]]["pct"]), "BR_DEAL": E(BRIDGE[g["code"]]["deal"]),
+      "BR_STOCK": E(BRIDGE[g["code"]]["stock"]).replace("{n}", '<b data-stock>0</b>'),
+      "BR_CTA": E(BRIDGE[g["code"]]["cta"]), "BR_NO": E(BRIDGE[g["code"]]["no"]),
       "GU_KICK": E(g["guar_kick"]), "GU_H2": E(g["guar_h2"]),
       "SEAL1": E(g["guar_seal"][0]), "SEAL2": E(g["guar_seal"][1]), "GU_P": E(g["guar_p"]),
       "FQ_KICK": E(g["faq_kick"]), "FQ_H2": E(g["faq_h2"]), "FAQ": build_faq(g),
@@ -1181,15 +1214,19 @@ TEMPLATE = r"""<!DOCTYPE html>
 <!-- SOCIAL PROOF TICKER -->
 <div id="sp-toast"></div>
 
-<!-- EXIT MODAL -->
-<div class="modal-bg" id="exit-modal"><div class="modal">
-  <span class="x" data-close-exit>×</span>
-  <div class="top"><h3>{{EX_TITLE}}</h3><p>{{EX_SUB}}</p></div>
+<!-- BRIDGE: Coolizi sold out -> AiraBreeze switch (fires on buy intent / exit / dwell) -->
+<div class="modal-bg" id="bridge"><div class="modal bridge">
+  <span class="x js-bx" aria-label="close">×</span>
+  <div class="top">
+    <div class="br-badge">{{BR_BADGE}}</div>
+    <h3>{{BR_H}}</h3><p>{{BR_SUB}}</p>
+  </div>
   <div class="body">
-    <img src="../assets/img/{{HEROIMG}}" alt="Coolizi">
-    <div class="mcd">⏳ <span data-mcd>15:00</span></div>
-    <a class="btn js-cta" href="#">{{EX_CTA}}</a>
-    <button class="decline" data-close-exit>{{EX_DECLINE}}</button>
+    <div class="br-chips"><span>❄ {{BR_C1}}</span><span>🚚 {{BR_C2}}</span><span>🛡 {{BR_C3}}</span></div>
+    <div class="br-deal"><span class="br-pct">{{BR_PCT}}</span><span class="br-deal-t">{{BR_DEAL}} <b data-mcd>15:00</b></span></div>
+    <div class="br-stock">🔥 {{BR_STOCK}}</div>
+    <a class="btn pulse js-go br-cta" href="#">{{BR_CTA}} <span class="arw">→</span></a>
+    <button class="decline js-bx">{{BR_NO}}</button>
   </div>
 </div></div>
 

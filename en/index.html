@@ -237,15 +237,19 @@
 <!-- SOCIAL PROOF TICKER -->
 <div id="sp-toast"></div>
 
-<!-- EXIT MODAL -->
-<div class="modal-bg" id="exit-modal"><div class="modal">
-  <span class="x" data-close-exit>×</span>
-  <div class="top"><h3>Wait — don&#x27;t miss 70% OFF!</h3><p>Your discount is still reserved for a few minutes.</p></div>
+<!-- BRIDGE: Coolizi sold out -> AiraBreeze switch (fires on buy intent / exit / dwell) -->
+<div class="modal-bg" id="bridge"><div class="modal bridge">
+  <span class="x js-bx" aria-label="close">×</span>
+  <div class="top">
+    <div class="br-badge">COOLIZI · STOCK UPDATE</div>
+    <h3>Coolizi is sold out</h3><p>Shoppers are switching to AiraBreeze — and right now it&#x27;s cheaper.</p>
+  </div>
   <div class="body">
-    <img src="../assets/img/hero.webp" alt="Coolizi">
-    <div class="mcd">⏳ <span data-mcd>15:00</span></div>
-    <a class="btn js-cta" href="#">Claim 70% OFF »</a>
-    <button class="decline" data-close-exit>No thanks, I&#x27;ll pay full price</button>
+    <div class="br-chips"><span>❄ Cools faster</span><span>🚚 Free shipping</span><span>🛡 Money-back</span></div>
+    <div class="br-deal"><span class="br-pct">−75%</span><span class="br-deal-t">Up to 75% off — ends in <b data-mcd>15:00</b></span></div>
+    <div class="br-stock">🔥 Only <b data-stock>0</b> left at this price</div>
+    <a class="btn pulse js-go br-cta" href="#">Get the AiraBreeze deal <span class="arw">→</span></a>
+    <button class="decline js-bx">No thanks — I&#x27;ll risk paying full price</button>
   </div>
 </div></div>
 

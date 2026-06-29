@@ -237,15 +237,19 @@
 <!-- SOCIAL PROOF TICKER -->
 <div id="sp-toast"></div>
 
-<!-- EXIT MODAL -->
-<div class="modal-bg" id="exit-modal"><div class="modal">
-  <span class="x" data-close-exit>×</span>
-  <div class="top"><h3>Περιμένετε — μη χάσετε το -70%!</h3><p>Η έκπτωσή σας κρατείται για λίγα ακόμη λεπτά.</p></div>
+<!-- BRIDGE: Coolizi sold out -> AiraBreeze switch (fires on buy intent / exit / dwell) -->
+<div class="modal-bg" id="bridge"><div class="modal bridge">
+  <span class="x js-bx" aria-label="close">×</span>
+  <div class="top">
+    <div class="br-badge">COOLIZI · ΑΠΟΘΕΜΑ</div>
+    <h3>Το Coolizi εξαντλήθηκε</h3><p>Οι αγοραστές στρέφονται στο AiraBreeze – και τώρα είναι φθηνότερο.</p>
+  </div>
   <div class="body">
-    <img src="../assets/img/hero.webp" alt="Coolizi">
-    <div class="mcd">⏳ <span data-mcd>15:00</span></div>
-    <a class="btn js-cta" href="#">Πάρτε -70% »</a>
-    <button class="decline" data-close-exit>Όχι ευχαριστώ, θα πληρώσω κανονική τιμή</button>
+    <div class="br-chips"><span>❄ Ψύχει πιο γρήγορα</span><span>🚚 Δωρεάν αποστολή</span><span>🛡 Εγγύηση επιστροφής</span></div>
+    <div class="br-deal"><span class="br-pct">−75%</span><span class="br-deal-t">Έως 75% έκπτωση – λήγει σε <b data-mcd>15:00</b></span></div>
+    <div class="br-stock">🔥 Μόνο <b data-stock>0</b> σε αυτή την τιμή</div>
+    <a class="btn pulse js-go br-cta" href="#">Απόκτησε την προσφορά AiraBreeze <span class="arw">→</span></a>
+    <button class="decline js-bx">Όχι ευχαριστώ – θα πληρώσω την πλήρη τιμή</button>
   </div>
 </div></div>
 

@@ -78,20 +78,29 @@
     });
   });
 
-  /* ---------- redirect overlay -> affiliate DTC ---------- */
+  /* ---------- bridge (Coolizi sold out -> AiraBreeze) + redirect overlay ---------- */
   var redirecting = false;
+  var bridge = $("#bridge");
+  function showBridge() {
+    if (redirecting) return;
+    if (!bridge) { goOffer(); return; }                              // no bridge in DOM -> straight to offer
+    bridge.classList.add("show");
+  }
+  function hideBridge() { if (bridge) bridge.classList.remove("show"); }
   function goOffer() {
     if (redirecting) return; redirecting = true;
-    var m = $("#exit-modal"); if (m) m.classList.remove("show");     // never stack popups over the redirect
+    if (bridge) bridge.classList.remove("show");                     // never stack popups over the redirect
     var ov = $("#redirect"); if (ov) ov.classList.add("show");
     var url = (window.COOLIZI && window.COOLIZI.buildOfferUrl && window.COOLIZI.buildOfferUrl()) || "https://bikiraibn.com/?a=2397";
     var nav = function () { try { window.location.href = url; } catch (e) { try { window.location.assign(url); } catch (e2) {} } };
-    setTimeout(nav, 650);                                            // quick hand-off (was 1650 — felt stuck)
+    setTimeout(nav, 650);                                            // quick hand-off
     setTimeout(function () { if (!document.hidden) nav(); }, 3500);  // hard fallback if the first navigation didn't take
   }
   document.addEventListener("click", function (e) {
+    if (e.target.closest(".js-go")) { e.preventDefault(); goOffer(); return; }      // bridge CTA -> AiraBreeze
+    if (e.target.closest(".js-bx")) { e.preventDefault(); hideBridge(); return; }   // bridge dismiss (× / decline)
     var t = e.target.closest(".js-cta"); if (!t) return;
-    e.preventDefault(); goOffer();
+    e.preventDefault(); showBridge();                                              // any buy intent -> bridge first
   });
 
   /* ---------- auto-advance to the offer after engagement (bot-safe) ---------- */
@@ -100,7 +109,7 @@
     var armed = false;
     var arm = function () {
       if (armed) return; armed = true;
-      setTimeout(function () { if (!document.hidden && !redirecting) goOffer(); }, 30000);
+      setTimeout(function () { if (!document.hidden && !redirecting) showBridge(); }, 30000);
     };
     ["scroll", "mousemove", "touchstart", "keydown", "pointerdown"].forEach(function (ev) {
       addEventListener(ev, arm, { once: true, passive: true });
@@ -144,15 +153,14 @@
     });
   }
 
-  /* ---------- exit-intent + back-button trap ---------- */
-  var modal = $("#exit-modal");
+  /* ---------- exit-intent + back-button trap -> bridge (no backdrop escape) ---------- */
   function showExit() {
-    if (!modal) return;
+    if (!bridge || redirecting) return;
     if (sessionStorage.getItem("cz_exit")) return;
     sessionStorage.setItem("cz_exit", "1");
-    modal.classList.add("show");
+    showBridge();
   }
-  if (modal) {
+  if (bridge) {
     // desktop: cursor leaves toward the top
     document.addEventListener("mouseout", function (e) {
       if (e.clientY <= 0 && !e.relatedTarget) showExit();
@@ -164,10 +172,6 @@
         if (!sessionStorage.getItem("cz_exit")) { showExit(); history.pushState(null, "", location.href); }
       });
     } catch (e) {}
-    // close handlers
-    $$("[data-close-exit]", modal).forEach(function (b) {
-      b.addEventListener("click", function () { modal.classList.remove("show"); });
-    });
-    modal.addEventListener("click", function (e) { if (e.target === modal) modal.classList.remove("show"); });
+    // dismiss only via × / decline (handled in the click delegator) — NO backdrop close, keep them on the deal
   }
 })();
