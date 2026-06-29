@@ -9,14 +9,14 @@
   var AFF_BASE = "https://bikiraibn.com/?a=2397";
   var OFFERS = {
     //  geo :  { c: "<creative / offer id>",  s1: "<tracking sub-id>" }
-    "en": { c: "9538", s1: "intl-uk" },   // UK / English
-    "de": { c: "9540", s1: "try-de"  },   // DE / AT / CH
-    "fr": { c: "9538", s1: "intl-fr" },   // FR / BE
-    "it": { c: "9538", s1: "intl-it" },   // Italy
-    "es": { c: "9538", s1: "intl-es" },   // Spain
-    "nl": { c: "9538", s1: "intl-nl" },   // Netherlands
-    "pt": { c: "9538", s1: "intl-pt" },   // Portugal
-    "el": { c: "9538", s1: "intl-gr" }    // Greece
+    "en": { c: "9578", s1: "try-uk" },   // UK / English  (Coolizi)
+    "de": { c: "9553", s1: "try-de" },   // DE / AT / CH  (Coolizi)
+    "fr": { c: "9558", s1: "try-fr" },   // FR / BE       (Coolizi)
+    "it": { c: "9598", s1: "try-it" },   // Italy         (Coolizi)
+    "es": { c: "9587", s1: "try-es" },   // Spain         (Coolizi)
+    "nl": { c: "9590", s1: "try-nl" },   // Netherlands   (Coolizi)
+    "pt": { c: "9601", s1: "try-pt" },   // Portugal      (Coolizi)
+    "el": { c: "9596", s1: "try-gr" }    // Greece        (Coolizi)
   };
   // ======================================================================================================
   var IPINFO_TOKEN = "fcc8c88c9a040a"; // geo provider for the social-proof ticker (ipwho.is is the fallback)
