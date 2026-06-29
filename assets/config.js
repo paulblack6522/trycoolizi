@@ -3,19 +3,20 @@
   "use strict";
 
   // ============ OFFER LINKS — EDIT HERE TO CHANGE WHERE EACH GEO'S "BUY" BUTTON SENDS TRAFFIC ============
-  // NETWORK: Influx (Everflow). To change an offer: paste the new "url" (the offer's tracking link from
-  // Influx) for a geo below, then commit. LIVE in ~1 minute, no rebuild. Keep "s1" (our geo tracking tag).
-  // Final link = <url> + "?sub1=<s1>" (+ "&sub2=<clickid>" if a paid click-id is present).
+  // NETWORK: Blitz Ads (bikiraibn, affiliate a=2397) → AiraBreeze. To change an offer: edit the "c"
+  // (creative id) for a geo, then commit. LIVE in ~1 minute, no rebuild. Keep "s1" (our geo tracking tag).
+  // Final link = AFF_BASE + "&c=<c>&s1=<s1>" (+ "&s2=<clickid>" for paid).   DACH creative = 9540, INTL = 9538.
+  var AFF_BASE = "https://bikiraibn.com/?a=2397";
   var OFFERS = {
-    //  geo :  { url: "<Influx/Everflow tracking link>",            s1: "<tracking sub-id>" }
-    "en": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D6NGN16/", s1: "try-uk" },  // UK / Ireland
-    "de": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D6JB1RC/", s1: "try-de" },  // DE / AT / CH
-    "fr": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D6M3R8K/", s1: "try-fr" },  // FR / BE
-    "it": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D726T5F/", s1: "try-it" },  // Italy
-    "es": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D73KPW2/", s1: "try-es" },  // Spain
-    "nl": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D6W26XL/", s1: "try-nl" },  // Netherlands
-    "pt": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D6ZRZDS/", s1: "try-pt" },  // Portugal
-    "el": { url: "https://www.abjdoi4kjd.com/27DJQ2C/D6XF3N7/", s1: "try-gr" }   // Greece
+    //  geo :  { c: "<creative id>",  s1: "<tracking tag>" }
+    "en": { c: "9538", s1: "intl-uk" },   // INTL → UK / Ireland
+    "de": { c: "9540", s1: "try-de"  },   // DACH → DE / AT / CH
+    "fr": { c: "9538", s1: "intl-fr" },   // INTL → FR / BE
+    "it": { c: "9538", s1: "intl-it" },   // INTL → Italy
+    "es": { c: "9538", s1: "intl-es" },   // INTL → Spain
+    "nl": { c: "9538", s1: "intl-nl" },   // INTL → Netherlands
+    "pt": { c: "9538", s1: "intl-pt" },   // INTL → Portugal
+    "el": { c: "9538", s1: "intl-gr" }    // INTL → Greece
   };
   // ======================================================================================================
   var IPINFO_TOKEN = "fcc8c88c9a040a"; // geo provider for the social-proof ticker (ipwho.is is the fallback)
@@ -39,14 +40,16 @@
   // ---- build the outbound affiliate URL (call at click time) ----
   function buildOfferUrl() {
     var g = window.GEO || {};
-    var off = (OFFERS && OFFERS[g.code]) || OFFERS.en || {};   // default to EN if geo unknown
-    var s1 = off.s1 || ("try-" + (g.code || "xx"));
-    var u = new URL(off.url || "https://www.abjdoi4kjd.com/27DJQ2C/D6NGN16/");
-    u.searchParams.set("sub1", s1);                            // our geo tracking tag -> Everflow sub1
-    // pass any paid click-id into sub2 for later reconciliation
+    var off = (OFFERS && OFFERS[g.code]) || OFFERS.en || {};   // default to INTL/EN if geo unknown
+    var c = off.c;
+    var s1 = off.s1 || ("intl-" + (g.code || "xx"));
+    var u = new URL(AFF_BASE);
+    if (c) u.searchParams.set("c", c);
+    u.searchParams.set("s1", s1);
+    // pass any paid click-id into s2 for later reconciliation
     var t = getTrack();
     var clickid = t.gclid || t.fbclid || t.ttclid || t.msclkid;
-    if (clickid) u.searchParams.set("sub2", clickid);
+    if (clickid) u.searchParams.set("s2", clickid);
     return u.toString();
   }
 
