@@ -39,6 +39,11 @@
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Product", "name": "Coolizi Portable AC", "image": ["https://trycoolizi.com/assets/img/hero.webp"], "description": "Il condizionatore portatile Coolizi vale la pena? ✓ La nostra prova 2026: raffrescamento, prezzo, recensioni reali e lo sconto ufficiale del 70%. Leggi prima di comprare.", "brand": {"@type": "Brand", "name": "Coolizi"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "8192", "bestRating": "5"}, "review": [{"@type": "Review", "author": {"@type": "Person", "name": "Marco R."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Comprata per la camera durante il caldo, finalmente dormo. Silenziosa e aria davvero fresca."}, {"@type": "Review", "author": {"@type": "Person", "name": "Giulia B."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Scettica all'inizio ma funziona davvero. Rinfresca l'ufficio in pochi minuti."}, {"@type": "Review", "author": {"@type": "Person", "name": "Lorenzo C."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Preso il set da 2 — una sopra, una sotto. Miglior acquisto dell'estate."}, {"@type": "Review", "author": {"@type": "Person", "name": "Sofia M."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Nessun problema di tubi o staffe alla finestra. Collegata e funziona."}, {"@type": "Review", "author": {"@type": "Person", "name": "Alessandro V."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Bolletta quasi invariata, casa confortevole. Avrei dovuto comprarla prima."}], "offers": {"@type": "AggregateOffer", "lowPrice": "99.99", "highPrice": "137.99", "priceCurrency": "EUR", "offerCount": "4", "availability": "https://schema.org/InStock", "url": "https://trycoolizi.com/it/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "La Coolizi è un vero condizionatore?", "acceptedAnswer": {"@type": "Answer", "text": "È un raffrescatore personale senza installazione che rinfresca velocemente l'area attorno a te. Ideale per camera, ufficio e uso personale — non per sostituire un impianto centralizzato."}}, {"@type": "Question", "name": "Quanto costa la Coolizi?", "acceptedAnswer": {"@type": "Answer", "text": "L'unità costa 137,99 € con l'attuale sconto del 70%, e la confezione da 2 conviene di più a pezzo. Oggi sullo store ufficiale c'è un coupon aggiuntivo."}}, {"@type": "Question", "name": "Serve installazione?", "acceptedAnswer": {"@type": "Answer", "text": "No. Niente tubo, niente kit finestra, niente tecnico. Colleghi e accendi."}}, {"@type": "Question", "name": "Coolizi è affidabile o una truffa?", "acceptedAnswer": {"@type": "Answer", "text": "Viene spedita da uno store ufficiale con tracciamento, assistenza e garanzia soddisfatti o rimborsati 30 giorni. Come per ogni prodotto popolare, acquista solo tramite il link ufficiale per avere la garanzia."}}, {"@type": "Question", "name": "Tempi di consegna in Italia?", "acceptedAnswer": {"@type": "Answer", "text": "La spedizione è tracciata; dopo l'ordine ricevi un numero di tracciamento via email."}}, {"@type": "Question", "name": "E se non fa per me?", "acceptedAnswer": {"@type": "Answer", "text": "Sei coperto dalla garanzia 30 giorni — reso per rimborso completo o sostituzione."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://trycoolizi.com/it/"}, {"@type": "ListItem", "position": 2, "name": "Coolizi Review"}]}, {"@context": "https://schema.org", "@type": "Organization", "name": "trycoolizi.com", "url": "https://trycoolizi.com"}]</script>
 </head>
 <body>
+<div class="soldbar" id="soldbar" data-state="live"><div class="wrap">
+  <span class="sb-msg sb-l"><span class="sb-dot"></span>🔴 Coolizi — ultime unità: <b><span data-cz-stock>2</span></b> rimaste</span>
+  <span class="sb-msg sb-s">❌ COOLIZI — ESAURITO</span>
+  <span class="sb-msg sb-sry">Ci dispiace davvero — l&#x27;ultimo Coolizi è appena andato.</span>
+</div></div>
 <div class="announce">
   <span>🚚 Spedizione tracciata GRATIS oggi</span>
   <span>L&#x27;offerta termina tra <b data-cd>15:00</b></span>
@@ -240,16 +245,23 @@
 <!-- BRIDGE: Coolizi sold out -> AiraBreeze switch (fires on buy intent / exit / dwell) -->
 <div class="modal-bg" id="bridge"><div class="modal bridge">
   <span class="x js-bx" aria-label="close">×</span>
-  <div class="top">
-    <div class="br-badge">COOLIZI · DISPONIBILITÀ</div>
-    <h3>Coolizi è esaurito</h3><p>Gli acquirenti stanno passando ad AiraBreeze – e ora costa meno.</p>
-  </div>
-  <div class="body">
-    <div class="br-chips"><span>❄ Raffredda prima</span><span>🚚 Spedizione gratis</span><span>🛡 Soddisfatti o rimborsati</span></div>
-    <div class="br-deal"><span class="br-pct">−75%</span><span class="br-deal-t">Fino al 75% di sconto – finisce tra <b data-mcd>15:00</b></span></div>
-    <div class="br-stock">🔥 Solo <b data-stock>0</b> a questo prezzo</div>
-    <a class="btn pulse js-go br-cta" href="#">Approfitta dell&#x27;offerta AiraBreeze <span class="arw">→</span></a>
-    <button class="decline js-bx">No grazie – preferisco pagare il prezzo pieno</button>
+  <div class="br-grid">
+    <div class="br-media">
+      <img src="../assets/img/airabreeze.png" alt="AiraBreeze portable cooler" width="348" height="214" loading="lazy">
+      <div class="br-pctbadge">−75%<small>today</small></div>
+    </div>
+    <div class="br-content">
+      <div class="br-badge">COOLIZI · ESAURITO</div>
+      <h3>E in un attimo… Coolizi è finito</h3>
+      <p class="br-heat">Un&#x27;altra notte troppo calda per dormire – e proprio quello che tutti volevano è appena finito.</p>
+      <p class="br-sub">Ma non devi sopportare il resto di questo caldo. AiraBreeze può ancora arrivare in tempo.</p>
+      <div class="br-chips"><span>❄ Aria fresca in 60s</span><span>🚚 Spedizione gratis</span><span>🛡 Reso in 30 giorni</span></div>
+      <div class="br-deal"><span class="br-deal-t">Fino al 75% di sconto – finisce tra</span> <b data-mcd>15:00</b></div>
+      <div class="br-demand">🔥 È quello a cui stanno passando tutti ora – e sta finendo in fretta anche lui. · Solo <b data-stock>0</b> a questo prezzo</div>
+      <a class="btn pulse js-go br-cta" href="#">Sì — tienimi al fresco <span class="arw">→</span></a>
+      <div class="br-auto">Ti portiamo lì tra <b id="br-auto-n">15</b>s</div>
+      <button class="decline js-bx">No grazie, sopporto il caldo</button>
+    </div>
   </div>
 </div></div>
 

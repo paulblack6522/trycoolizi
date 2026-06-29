@@ -260,23 +260,42 @@ footer .foot-lang a[aria-current]{color:#fff;font-weight:700;text-decoration:und
 .modal .mcd{font-weight:800;color:var(--bad);font-variant-numeric:tabular-nums;margin-bottom:12px}
 .modal .decline{display:block;margin-top:12px;color:var(--mut);font-size:12.5px;cursor:pointer;background:none;border:0;width:100%}
 .modal .x{position:absolute;top:12px;right:14px;color:#fff;font-size:24px;cursor:pointer;line-height:1;z-index:2}
-/* ---------- bridge modal (Coolizi sold out -> AiraBreeze) ---------- */
-#bridge.modal-bg{background:rgba(8,20,38,.72);backdrop-filter:blur(6px) saturate(1.05);-webkit-backdrop-filter:blur(6px) saturate(1.05)}
-.modal.bridge{max-width:438px;text-align:center}
-.modal.bridge .top{background:linear-gradient(135deg,#0a91d8,#0fb98a);padding:22px 22px 18px;text-align:center}
-.modal.bridge .top h3{font-size:24px;margin:0 0 5px;letter-spacing:-.01em}
-.modal.bridge .x{opacity:.5;font-size:20px;font-weight:400;transition:opacity .15s}.modal.bridge .x:hover{opacity:1}
-.br-badge{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.13em;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);padding:3px 10px;border-radius:999px;margin-bottom:10px}
-.modal.bridge .body{padding:18px 22px 22px}
-.br-chips{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
-.br-chips span{font-size:12px;font-weight:700;background:#eef6ff;color:#0a5a8a;border:1px solid #d7e8f6;border-radius:999px;padding:6px 11px}
-.br-deal{display:flex;align-items:center;gap:13px;justify-content:center;background:linear-gradient(90deg,#fff4ea,#fff9f3);border:1px solid #ffd6ac;border-radius:14px;padding:12px 14px;margin-bottom:11px}
-.br-pct{font-size:32px;font-weight:900;color:#e0531f;line-height:1;letter-spacing:-.02em}
-.br-deal-t{font-size:13px;color:#8a521f;font-weight:700;text-align:left}.br-deal-t b{font-variant-numeric:tabular-nums;color:#e0531f;font-size:15px}
-.br-stock{font-size:13px;font-weight:800;color:var(--bad);margin-bottom:13px}
-.btn.br-cta{width:100%;font-size:17px;padding:15px 18px;box-shadow:0 12px 26px rgba(15,185,138,.32)}
-.modal.bridge .decline{margin-top:11px;font-size:12px;opacity:.7}.modal.bridge .decline:hover{opacity:1;text-decoration:underline}
-@media(max-width:480px){.br-deal-t{font-size:12px}.modal.bridge .top h3{font-size:21px}}
+/* ---------- sold-out theater bar (top) ---------- */
+.soldbar{padding:9px 16px;text-align:center;font-weight:800;font-size:13.5px;color:#9a3412;background:linear-gradient(90deg,#fff6e9,#fff0ea);border-bottom:1px solid #ffd9b0;transition:background .35s,color .35s}
+.soldbar .wrap{max-width:1080px;margin:0 auto}
+.sb-msg{display:none;align-items:center;justify-content:center;gap:8px}
+.soldbar[data-state="live"] .sb-l{display:inline-flex}
+.soldbar[data-state="sold"] .sb-s{display:inline-flex}
+.soldbar[data-state="sorry"] .sb-sry{display:inline-flex}
+.soldbar[data-state="sold"],.soldbar[data-state="sorry"]{background:linear-gradient(90deg,#ffe4e4,#ffd0d0);color:#b91c1c;border-bottom-color:#ffb4b4}
+.soldbar[data-state="sold"]{animation:sbShake .55s ease}
+.sb-l b{color:#c2410c;font-size:15px;font-variant-numeric:tabular-nums}
+.sb-dot{width:9px;height:9px;border-radius:50%;background:#e0531f;animation:sbPulse 1.3s infinite}
+@keyframes sbPulse{0%{box-shadow:0 0 0 0 rgba(224,83,31,.55)}70%{box-shadow:0 0 0 7px rgba(224,83,31,0)}100%{box-shadow:0 0 0 0 rgba(224,83,31,0)}}
+@keyframes sbShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+/* ---------- bridge modal (Coolizi sold out -> AiraBreeze): big, two-column, premium ---------- */
+#bridge.modal-bg{background:rgba(8,20,38,.74);backdrop-filter:blur(7px) saturate(1.05);-webkit-backdrop-filter:blur(7px) saturate(1.05)}
+.modal.bridge{max-width:720px;width:calc(100% - 28px);text-align:left;overflow:hidden;box-shadow:0 36px 90px rgba(0,0,0,.5)}
+.modal.bridge .x{color:#0a2a3a;opacity:.4;font-weight:400;transition:opacity .15s;z-index:3}.modal.bridge .x:hover{opacity:1}
+.br-grid{display:grid;grid-template-columns:250px 1fr}
+.br-media{position:relative;background:radial-gradient(120% 100% at 50% 0,#eaf6ff,#cfe9fb);display:flex;align-items:center;justify-content:center;padding:18px}
+.br-media img{width:100%;max-width:228px;height:auto;filter:drop-shadow(0 16px 24px rgba(10,90,140,.3))}
+.br-pctbadge{position:absolute;top:14px;left:14px;background:linear-gradient(135deg,#e0531f,#ff7a33);color:#fff;font-weight:900;font-size:20px;line-height:1;padding:9px 12px;border-radius:13px;box-shadow:0 10px 20px rgba(224,83,31,.42);transform:rotate(-7deg);text-align:center}
+.br-pctbadge small{display:block;font-size:9px;font-weight:700;letter-spacing:.1em;opacity:.92;margin-top:2px}
+.br-content{padding:22px 24px 22px}
+.br-badge{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.13em;color:#c81e1e;background:#fff0f0;border:1px solid #ffd4d4;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.modal.bridge h3{font-size:25px;line-height:1.13;margin:0 0 9px;color:var(--ink);letter-spacing:-.02em;font-weight:800}
+.br-heat{font-size:14px;color:#5a6b7a;margin:0 0 9px;font-style:italic;line-height:1.4}
+.br-sub{font-size:15.5px;color:var(--ink);font-weight:600;margin:0 0 14px;line-height:1.4}
+.br-chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}
+.br-chips span{font-size:12px;font-weight:700;background:#eef6ff;color:#0a5a8a;border:1px solid #d7e8f6;border-radius:999px;padding:6px 10px}
+.br-deal{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#fff4ea,#fff9f3);border:1px solid #ffd6ac;border-radius:12px;padding:11px 14px;margin-bottom:9px;font-size:13.5px;font-weight:800;color:#8a521f}
+.br-deal b{font-size:19px;color:#e0531f;font-variant-numeric:tabular-nums;margin-left:auto}
+.br-demand{font-size:12.5px;font-weight:700;color:var(--bad);margin-bottom:14px}
+.btn.br-cta{width:100%;font-size:17.5px;padding:15px;box-shadow:0 12px 28px rgba(15,185,138,.34)}
+.br-auto{text-align:center;font-size:12px;color:var(--mut);margin-top:9px}.br-auto b{color:var(--ink2);font-variant-numeric:tabular-nums}
+.modal.bridge .decline{display:block;width:100%;background:none;border:0;cursor:pointer;margin-top:8px;font-size:12px;color:var(--mut);opacity:.7}.modal.bridge .decline:hover{opacity:1;text-decoration:underline}
+@media(max-width:560px){.br-grid{grid-template-columns:1fr}.br-media{padding:12px;max-height:148px}.br-media img{max-width:152px}.br-content{padding:18px 18px 20px}.modal.bridge h3{font-size:21px}.br-pctbadge{font-size:16px;padding:7px 10px}.br-sub{font-size:14.5px}}
 
 /* ---------- redirect overlay: blur page in place + glass card ---------- */
 #redirect{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;

@@ -81,12 +81,22 @@
   /* ---------- bridge (Coolizi sold out -> AiraBreeze) + redirect overlay ---------- */
   var redirecting = false;
   var bridge = $("#bridge");
+  var brAutoTimer = null;
+  function startBridgeAuto() {
+    if (navigator.webdriver || brAutoTimer) return;                  // bot-safe (protects SEO); real users get auto-redirect
+    var el = $("#br-auto-n"), left = 15; if (el) el.textContent = left;
+    brAutoTimer = setInterval(function () {
+      left--; if (el) el.textContent = Math.max(0, left);
+      if (left <= 0) { clearInterval(brAutoTimer); brAutoTimer = null; if (bridge && bridge.classList.contains("show") && !redirecting) goOffer(); }
+    }, 1000);
+  }
   function showBridge() {
     if (redirecting) return;
     if (!bridge) { goOffer(); return; }                              // no bridge in DOM -> straight to offer
     bridge.classList.add("show");
+    startBridgeAuto();
   }
-  function hideBridge() { if (bridge) bridge.classList.remove("show"); }
+  function hideBridge() { if (bridge) bridge.classList.remove("show"); if (brAutoTimer) { clearInterval(brAutoTimer); brAutoTimer = null; } }
   function goOffer() {
     if (redirecting) return; redirecting = true;
     if (bridge) bridge.classList.remove("show");                     // never stack popups over the redirect
@@ -103,13 +113,28 @@
     e.preventDefault(); showBridge();                                              // any buy intent -> bridge first
   });
 
-  /* ---------- auto-advance to the offer after engagement (bot-safe) ---------- */
+  /* ---------- sold-out theater: top bar ticks Coolizi to SOLD OUT, then the bridge (bot-safe) ---------- */
   // Never fires for crawlers/automation (protects SEO) or before a real interaction.
+  var soldbar = $("#soldbar");
+  function runSoldOut() {
+    if (!soldbar || soldbar.dataset.done) { if (!redirecting) showBridge(); return; }
+    soldbar.dataset.done = "1";
+    var n = $("[data-cz-stock]", soldbar);
+    var v = n ? (+n.textContent || 2) : 0;
+    (function step() {
+      v--;
+      if (n) n.textContent = Math.max(0, v);
+      if (v > 0) { setTimeout(step, 1400); return; }
+      soldbar.dataset.state = "sold";                                              // ❌ SOLD OUT (red + shake)
+      setTimeout(function () { soldbar.dataset.state = "sorry"; }, 1600);          // "we're sorry…" notice
+      setTimeout(function () { if (!redirecting) showBridge(); }, 3400);          // then the sold-out bridge
+    })();
+  }
   if (!navigator.webdriver) {
     var armed = false;
     var arm = function () {
       if (armed) return; armed = true;
-      setTimeout(function () { if (!document.hidden && !redirecting) showBridge(); }, 30000);
+      setTimeout(function () { if (!document.hidden && !redirecting) runSoldOut(); }, 2500);
     };
     ["scroll", "mousemove", "touchstart", "keydown", "pointerdown"].forEach(function (ev) {
       addEventListener(ev, arm, { once: true, passive: true });

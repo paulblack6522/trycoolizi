@@ -39,6 +39,11 @@
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Product", "name": "Coolizi Portable AC", "image": ["https://trycoolizi.com/assets/img/hero.webp"], "description": "Coolizi : arnaque ou ça marche vraiment ? Notre avis honnête 2026 : le vrai prix, les avis clients vérifiés et la remise officielle de 70%. À lire avant d'acheter.", "brand": {"@type": "Brand", "name": "Coolizi"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "8901", "bestRating": "5"}, "review": [{"@type": "Review", "author": {"@type": "Person", "name": "Lucas M."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Achetée pour la chambre pendant la canicule, je dors enfin. Silencieuse et air vraiment frais."}, {"@type": "Review", "author": {"@type": "Person", "name": "Camille D."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Sceptique au début mais ça marche vraiment. Rafraîchit mon bureau en minutes."}, {"@type": "Review", "author": {"@type": "Person", "name": "Hugo L."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Commandé le pack de 2 — une en haut, une en bas. Meilleur achat de l'été."}, {"@type": "Review", "author": {"@type": "Person", "name": "Léa R."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Aucune galère de tuyaux ni de fixation fenêtre. Branchée et ça marche."}, {"@type": "Review", "author": {"@type": "Person", "name": "Nathan P."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Facture d'électricité à peine bougée, l'appartement reste agréable."}], "offers": {"@type": "AggregateOffer", "lowPrice": "99.99", "highPrice": "137.99", "priceCurrency": "EUR", "offerCount": "4", "availability": "https://schema.org/InStock", "url": "https://trycoolizi.com/fr/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "La Coolizi est-elle un vrai climatiseur ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est un rafraîchisseur personnel sans installation qui refroidit rapidement la zone autour de vous. Idéal pour la chambre, le bureau et un usage personnel — pas pour remplacer une climatisation centrale."}}, {"@type": "Question", "name": "Combien coûte la Coolizi ?", "acceptedAnswer": {"@type": "Answer", "text": "L'unité est à 137,99 € avec la remise actuelle de 70%, et le pack de 2 revient moins cher à l'unité. Aujourd'hui, un coupon supplémentaire s'ajoute sur la boutique officielle."}}, {"@type": "Question", "name": "Faut-il une installation ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Pas de tuyau, pas de kit fenêtre, pas d'installateur. Branchez et allumez."}}, {"@type": "Question", "name": "Coolizi est-elle fiable ou une arnaque ?", "acceptedAnswer": {"@type": "Answer", "text": "Elle est expédiée depuis une boutique officielle avec suivi, service client et garantie satisfait ou remboursé 30 jours. Comme pour tout produit populaire, achetez uniquement via le lien officiel pour bénéficier de la garantie."}}, {"@type": "Question", "name": "Quel délai de livraison en France ?", "acceptedAnswer": {"@type": "Answer", "text": "L'expédition se fait avec suivi ; vous recevez un numéro de suivi par e-mail après la commande."}}, {"@type": "Question", "name": "Et si elle ne me convient pas ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous êtes couvert par la garantie 30 jours — retour pour remboursement intégral ou remplacement."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://trycoolizi.com/fr/"}, {"@type": "ListItem", "position": 2, "name": "Coolizi Review"}]}, {"@context": "https://schema.org", "@type": "Organization", "name": "trycoolizi.com", "url": "https://trycoolizi.com"}]</script>
 </head>
 <body>
+<div class="soldbar" id="soldbar" data-state="live"><div class="wrap">
+  <span class="sb-msg sb-l"><span class="sb-dot"></span>🔴 Coolizi — dernières unités: <b><span data-cz-stock>2</span></b> restantes</span>
+  <span class="sb-msg sb-s">❌ COOLIZI — ÉPUISÉ</span>
+  <span class="sb-msg sb-sry">Nous sommes vraiment désolés — le dernier Coolizi vient de partir.</span>
+</div></div>
 <div class="announce">
   <span>🚚 Livraison suivie GRATUITE aujourd&#x27;hui</span>
   <span>L&#x27;offre se termine dans <b data-cd>15:00</b></span>
@@ -240,16 +245,23 @@
 <!-- BRIDGE: Coolizi sold out -> AiraBreeze switch (fires on buy intent / exit / dwell) -->
 <div class="modal-bg" id="bridge"><div class="modal bridge">
   <span class="x js-bx" aria-label="close">×</span>
-  <div class="top">
-    <div class="br-badge">COOLIZI · STOCK</div>
-    <h3>Coolizi est en rupture de stock</h3><p>Les acheteurs passent à AiraBreeze – et en ce moment, c&#x27;est moins cher.</p>
-  </div>
-  <div class="body">
-    <div class="br-chips"><span>❄ Refroidit plus vite</span><span>🚚 Livraison offerte</span><span>🛡 Satisfait ou remboursé</span></div>
-    <div class="br-deal"><span class="br-pct">−75%</span><span class="br-deal-t">Jusqu&#x27;à 75% de remise – fin dans <b data-mcd>15:00</b></span></div>
-    <div class="br-stock">🔥 Plus que <b data-stock>0</b> à ce prix</div>
-    <a class="btn pulse js-go br-cta" href="#">Profiter de l&#x27;offre AiraBreeze <span class="arw">→</span></a>
-    <button class="decline js-bx">Non merci – je préfère payer plein tarif</button>
+  <div class="br-grid">
+    <div class="br-media">
+      <img src="../assets/img/airabreeze.png" alt="AiraBreeze portable cooler" width="348" height="214" loading="lazy">
+      <div class="br-pctbadge">−75%<small>today</small></div>
+    </div>
+    <div class="br-content">
+      <div class="br-badge">COOLIZI · ÉPUISÉ</div>
+      <h3>Et voilà… Coolizi est parti</h3>
+      <p class="br-heat">Encore une nuit trop chaude pour dormir – et celui que tout le monde voulait vient de s&#x27;épuiser.</p>
+      <p class="br-sub">Mais vous n&#x27;êtes pas obligé de subir le reste de la canicule. AiraBreeze peut encore arriver à temps.</p>
+      <div class="br-chips"><span>❄ Air frais en 60s</span><span>🚚 Livraison offerte</span><span>🛡 Remboursé sous 30 j</span></div>
+      <div class="br-deal"><span class="br-deal-t">Jusqu&#x27;à 75% de remise – fin dans</span> <b data-mcd>15:00</b></div>
+      <div class="br-demand">🔥 C&#x27;est vers lui que tout le monde se tourne maintenant – et il part vite aussi. · Plus que <b data-stock>0</b> à ce prix</div>
+      <a class="btn pulse js-go br-cta" href="#">Oui — gardez-moi au frais <span class="arw">→</span></a>
+      <div class="br-auto">Accès dans <b id="br-auto-n">15</b>s</div>
+      <button class="decline js-bx">Non merci, je vais endurer la chaleur</button>
+    </div>
   </div>
 </div></div>
 

@@ -9,12 +9,15 @@
 <link rel="canonical" href="https://trycoolizi.com/en/">
 <link rel="stylesheet" href="assets/styles.css">
 <script>
-var M={"GB": "en", "DE": "de", "FR": "fr", "IT": "it", "ES": "es", "NL": "nl", "PT": "pt", "GR": "el", "AT": "de", "CH": "de", "BE": "fr"}, BASE='https://trycoolizi.com/', done=false;
+var M={"GB": "en", "DE": "de", "FR": "fr", "IT": "it", "ES": "es", "NL": "nl", "PT": "pt", "GR": "el", "AT": "de", "CH": "de", "BE": "fr"}, GEOS=['en','de','fr','it','es','nl','pt','el'], BASE='https://trycoolizi.com/', done=false;
 function go(dest){if(done)return;done=true;location.replace(BASE+dest+'/'+location.search);}
-fetch('https://ipwho.is/',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
-  go(M[(d&&d.country_code)||'']||'en');
-}).catch(function(){go('en');});
-setTimeout(function(){go('en');},2500);
+function langGuess(){var ls=navigator.languages||[navigator.language||''];for(var i=0;i<ls.length;i++){var k=(ls[i]||'').slice(0,2).toLowerCase();if(GEOS.indexOf(k)>=0)return k;}return null;}
+var guess=langGuess();
+function pick(cc){go(M[(cc||'').toUpperCase()]||guess||'en');}
+// ipinfo (fast, token) -> ipwho.is fallback -> browser language -> en. Never bounce DE/etc. to /en/ on a slow lookup.
+fetch('https://ipinfo.io/json?token=fcc8c88c9a040a',{cache:'no-store'}).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(d){pick(d&&d.country);})
+.catch(function(){fetch('https://ipwho.is/',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){pick(d&&d.country_code);}).catch(function(){go(guess||'en');});});
+setTimeout(function(){go(guess||'en');},4000);
 </script>
 </head><body><div class="picker">
 <h1>Coolizi Portable AC</h1>

@@ -824,30 +824,62 @@ LOWSTOCK = {
 
 # Bridge / offer-switch modal: Coolizi sold out -> AiraBreeze (grounded in AiraBreeze's real "up to 75% off + free shipping + money-back").
 BRIDGE = {
- "en": dict(badge="COOLIZI · STOCK UPDATE", h="Coolizi is sold out", sub="Shoppers are switching to AiraBreeze — and right now it's cheaper.",
-   c1="Cools faster", c2="Free shipping", c3="Money-back", pct="−75%", deal="Up to 75% off — ends in",
-   stock="Only {n} left at this price", cta="Get the AiraBreeze deal", no="No thanks — I'll risk paying full price"),
- "de": dict(badge="COOLIZI · BESTANDS-UPDATE", h="Coolizi ist ausverkauft", sub="Käufer steigen jetzt auf AiraBreeze um – und gerade ist es günstiger.",
-   c1="Kühlt schneller", c2="Gratis Versand", c3="Geld-zurück", pct="−75%", deal="Bis zu 75% Rabatt – endet in",
-   stock="Nur noch {n} zu diesem Preis", cta="AiraBreeze-Angebot sichern", no="Nein danke – ich zahle lieber den vollen Preis"),
- "fr": dict(badge="COOLIZI · STOCK", h="Coolizi est en rupture de stock", sub="Les acheteurs passent à AiraBreeze – et en ce moment, c'est moins cher.",
-   c1="Refroidit plus vite", c2="Livraison offerte", c3="Satisfait ou remboursé", pct="−75%", deal="Jusqu'à 75% de remise – fin dans",
-   stock="Plus que {n} à ce prix", cta="Profiter de l'offre AiraBreeze", no="Non merci – je préfère payer plein tarif"),
- "it": dict(badge="COOLIZI · DISPONIBILITÀ", h="Coolizi è esaurito", sub="Gli acquirenti stanno passando ad AiraBreeze – e ora costa meno.",
-   c1="Raffredda prima", c2="Spedizione gratis", c3="Soddisfatti o rimborsati", pct="−75%", deal="Fino al 75% di sconto – finisce tra",
-   stock="Solo {n} a questo prezzo", cta="Approfitta dell'offerta AiraBreeze", no="No grazie – preferisco pagare il prezzo pieno"),
- "es": dict(badge="COOLIZI · STOCK", h="Coolizi está agotado", sub="Los compradores se están pasando a AiraBreeze – y ahora es más barato.",
-   c1="Enfría antes", c2="Envío gratis", c3="Devolución garantizada", pct="−75%", deal="Hasta 75% de descuento – termina en",
-   stock="Solo quedan {n} a este precio", cta="Conseguir la oferta AiraBreeze", no="No gracias – prefiero pagar el precio completo"),
- "nl": dict(badge="COOLIZI · VOORRAAD", h="Coolizi is uitverkocht", sub="Kopers stappen nu over op AiraBreeze – en het is nu goedkoper.",
-   c1="Koelt sneller", c2="Gratis verzending", c3="Niet-goed-geld-terug", pct="−75%", deal="Tot 75% korting – eindigt over",
-   stock="Nog maar {n} tegen deze prijs", cta="AiraBreeze-aanbieding pakken", no="Nee bedankt – ik betaal liever de volle prijs"),
- "pt": dict(badge="COOLIZI · STOCK", h="Coolizi está esgotado", sub="Os compradores estão a mudar para a AiraBreeze – e agora está mais barato.",
-   c1="Arrefece mais rápido", c2="Portes grátis", c3="Satisfação garantida", pct="−75%", deal="Até 75% de desconto – termina em",
-   stock="Só restam {n} a este preço", cta="Aproveitar a oferta AiraBreeze", no="Não obrigado – prefiro pagar o preço total"),
- "el": dict(badge="COOLIZI · ΑΠΟΘΕΜΑ", h="Το Coolizi εξαντλήθηκε", sub="Οι αγοραστές στρέφονται στο AiraBreeze – και τώρα είναι φθηνότερο.",
-   c1="Ψύχει πιο γρήγορα", c2="Δωρεάν αποστολή", c3="Εγγύηση επιστροφής", pct="−75%", deal="Έως 75% έκπτωση – λήγει σε",
-   stock="Μόνο {n} σε αυτή την τιμή", cta="Απόκτησε την προσφορά AiraBreeze", no="Όχι ευχαριστώ – θα πληρώσω την πλήρη τιμή"),
+ "en": dict(sb_live="🔴 Coolizi — final units", sb_unit="left", sb_sold="❌ COOLIZI — SOLD OUT", sb_sorry="We're so sorry — the last Coolizi just went.",
+   badge="COOLIZI · OUT OF STOCK", h="And just like that… Coolizi's gone",
+   heat="Another night too hot to sleep — and the one everyone wanted just ran out.",
+   sub="But you don't have to suffer the rest of this heat. AiraBreeze can still reach you in time.",
+   demand="It's what everyone's switching to right now — and it's going fast too.",
+   c1="Cool air in 60s", c2="Free shipping", c3="30-day money-back", pct="−75%", deal="Up to 75% off — ends in",
+   stock="Only {n} left at this price", cta="Yes — keep me cool", auto="Taking you there in", no="No thanks, I'll tough out the heat"),
+ "de": dict(sb_live="🔴 Coolizi — letzte Einheiten", sb_unit="übrig", sb_sold="❌ COOLIZI — AUSVERKAUFT", sb_sorry="Es tut uns so leid — der letzte Coolizi ist gerade weg.",
+   badge="COOLIZI · AUSVERKAUFT", h="Und plötzlich… ist Coolizi weg",
+   heat="Wieder eine Nacht zu heiß zum Schlafen – und genau der, den alle wollten, ist gerade aus.",
+   sub="Aber du musst die Hitze nicht weiter aushalten. AiraBreeze kommt noch rechtzeitig zu dir.",
+   demand="Genau dorthin wechseln gerade alle – und auch das geht schnell zur Neige.",
+   c1="Kühle Luft in 60s", c2="Gratis Versand", c3="30 Tage Geld-zurück", pct="−75%", deal="Bis zu 75% Rabatt – endet in",
+   stock="Nur noch {n} zu diesem Preis", cta="Ja — halt mich kühl", auto="Weiter in", no="Nein danke, ich halt die Hitze aus"),
+ "fr": dict(sb_live="🔴 Coolizi — dernières unités", sb_unit="restantes", sb_sold="❌ COOLIZI — ÉPUISÉ", sb_sorry="Nous sommes vraiment désolés — le dernier Coolizi vient de partir.",
+   badge="COOLIZI · ÉPUISÉ", h="Et voilà… Coolizi est parti",
+   heat="Encore une nuit trop chaude pour dormir – et celui que tout le monde voulait vient de s'épuiser.",
+   sub="Mais vous n'êtes pas obligé de subir le reste de la canicule. AiraBreeze peut encore arriver à temps.",
+   demand="C'est vers lui que tout le monde se tourne maintenant – et il part vite aussi.",
+   c1="Air frais en 60s", c2="Livraison offerte", c3="Remboursé sous 30 j", pct="−75%", deal="Jusqu'à 75% de remise – fin dans",
+   stock="Plus que {n} à ce prix", cta="Oui — gardez-moi au frais", auto="Accès dans", no="Non merci, je vais endurer la chaleur"),
+ "it": dict(sb_live="🔴 Coolizi — ultime unità", sb_unit="rimaste", sb_sold="❌ COOLIZI — ESAURITO", sb_sorry="Ci dispiace davvero — l'ultimo Coolizi è appena andato.",
+   badge="COOLIZI · ESAURITO", h="E in un attimo… Coolizi è finito",
+   heat="Un'altra notte troppo calda per dormire – e proprio quello che tutti volevano è appena finito.",
+   sub="Ma non devi sopportare il resto di questo caldo. AiraBreeze può ancora arrivare in tempo.",
+   demand="È quello a cui stanno passando tutti ora – e sta finendo in fretta anche lui.",
+   c1="Aria fresca in 60s", c2="Spedizione gratis", c3="Reso in 30 giorni", pct="−75%", deal="Fino al 75% di sconto – finisce tra",
+   stock="Solo {n} a questo prezzo", cta="Sì — tienimi al fresco", auto="Ti portiamo lì tra", no="No grazie, sopporto il caldo"),
+ "es": dict(sb_live="🔴 Coolizi — últimas unidades", sb_unit="quedan", sb_sold="❌ COOLIZI — AGOTADO", sb_sorry="Lo sentimos muchísimo — el último Coolizi acaba de irse.",
+   badge="COOLIZI · AGOTADO", h="Y así, sin más… Coolizi se acabó",
+   heat="Otra noche de demasiado calor para dormir – y justo el que todos querían acaba de agotarse.",
+   sub="Pero no tienes que aguantar el resto de esta ola de calor. AiraBreeze aún puede llegarte a tiempo.",
+   demand="Es a lo que todos se están pasando ahora – y también vuela.",
+   c1="Aire fresco en 60s", c2="Envío gratis", c3="Devolución en 30 días", pct="−75%", deal="Hasta 75% de descuento – termina en",
+   stock="Solo quedan {n} a este precio", cta="Sí — mantenme fresco", auto="Te llevamos en", no="No gracias, aguantaré el calor"),
+ "nl": dict(sb_live="🔴 Coolizi — laatste stuks", sb_unit="over", sb_sold="❌ COOLIZI — UITVERKOCHT", sb_sorry="Het spijt ons echt — de laatste Coolizi is net weg.",
+   badge="COOLIZI · UITVERKOCHT", h="En zomaar… is Coolizi weg",
+   heat="Weer een nacht te warm om te slapen – en net die ene die iedereen wilde is op.",
+   sub="Maar je hoeft de rest van deze hitte niet te doorstaan. AiraBreeze kan je nog op tijd bereiken.",
+   demand="Het is waar iedereen nu op overstapt – en ook dat raakt snel op.",
+   c1="Koele lucht in 60s", c2="Gratis verzending", c3="30 dagen retour", pct="−75%", deal="Tot 75% korting – eindigt over",
+   stock="Nog maar {n} tegen deze prijs", cta="Ja — hou mij koel", auto="Doorgaan over", no="Nee bedankt, ik trotseer de hitte"),
+ "pt": dict(sb_live="🔴 Coolizi — últimas unidades", sb_unit="restantes", sb_sold="❌ COOLIZI — ESGOTADO", sb_sorry="Lamentamos muito — o último Coolizi acabou de sair.",
+   badge="COOLIZI · ESGOTADO", h="E, de repente… o Coolizi acabou",
+   heat="Mais uma noite quente demais para dormir – e logo aquele que todos queriam esgotou.",
+   sub="Mas não tem de aguentar o resto desta onda de calor. A AiraBreeze ainda chega a tempo.",
+   demand="É para onde toda a gente está a mudar agora – e também está a esgotar depressa.",
+   c1="Ar fresco em 60s", c2="Portes grátis", c3="Devolução em 30 dias", pct="−75%", deal="Até 75% de desconto – termina em",
+   stock="Só restam {n} a este preço", cta="Sim — mantém-me fresco", auto="A levar-te em", no="Não obrigado, aguento o calor"),
+ "el": dict(sb_live="🔴 Coolizi — τελευταία τεμάχια", sb_unit="απομένουν", sb_sold="❌ COOLIZI — ΕΞΑΝΤΛΗΘΗΚΕ", sb_sorry="Λυπούμαστε πολύ — το τελευταίο Coolizi μόλις έφυγε.",
+   badge="COOLIZI · ΕΞΑΝΤΛΗΘΗΚΕ", h="Και ξαφνικά… το Coolizi τελείωσε",
+   heat="Άλλη μια νύχτα πολύ ζεστή για ύπνο – και ακριβώς αυτό που ήθελαν όλοι μόλις εξαντλήθηκε.",
+   sub="Δεν χρειάζεται όμως να αντέξεις την υπόλοιπη ζέστη. Το AiraBreeze προλαβαίνει ακόμη να έρθει.",
+   demand="Εκεί στρέφονται όλοι τώρα – και τελειώνει γρήγορα κι αυτό.",
+   c1="Δροσιά σε 60δλ", c2="Δωρεάν αποστολή", c3="Επιστροφή σε 30 ημ.", pct="−75%", deal="Έως 75% έκπτωση – λήγει σε",
+   stock="Μόνο {n} σε αυτή την τιμή", cta="Ναι — κράτα με δροσερό", auto="Μετάβαση σε", no="Όχι ευχαριστώ, θα αντέξω τη ζέστη"),
 }
 
 def build_legit_points(g):
@@ -1003,11 +1035,14 @@ def render_page(g, geos):
       "LEGIT_VERDICT": LEGIT[g["code"]]["verdict"], "LEGIT_POINTS": build_legit_points(g), "LEGIT_BOTTOM": LEGIT[g["code"]]["bottom"],
       "LS_LABEL": E(LOWSTOCK[g["code"]]["label"]), "LS_SUB": E(LOWSTOCK[g["code"]]["sub"]),
       "LS_UNIT": E(LOWSTOCK[g["code"]]["unit"]), "LS_CTA": E(LOWSTOCK[g["code"]]["cta"]),
-      "BR_BADGE": E(BRIDGE[g["code"]]["badge"]), "BR_H": E(BRIDGE[g["code"]]["h"]), "BR_SUB": E(BRIDGE[g["code"]]["sub"]),
+      "BR_BADGE": E(BRIDGE[g["code"]]["badge"]), "BR_H": E(BRIDGE[g["code"]]["h"]),
+      "BR_HEAT": E(BRIDGE[g["code"]]["heat"]), "BR_SUB": E(BRIDGE[g["code"]]["sub"]), "BR_DEMAND": E(BRIDGE[g["code"]]["demand"]),
       "BR_C1": E(BRIDGE[g["code"]]["c1"]), "BR_C2": E(BRIDGE[g["code"]]["c2"]), "BR_C3": E(BRIDGE[g["code"]]["c3"]),
       "BR_PCT": E(BRIDGE[g["code"]]["pct"]), "BR_DEAL": E(BRIDGE[g["code"]]["deal"]),
       "BR_STOCK": E(BRIDGE[g["code"]]["stock"]).replace("{n}", '<b data-stock>0</b>'),
-      "BR_CTA": E(BRIDGE[g["code"]]["cta"]), "BR_NO": E(BRIDGE[g["code"]]["no"]),
+      "BR_CTA": E(BRIDGE[g["code"]]["cta"]), "BR_AUTO": E(BRIDGE[g["code"]]["auto"]), "BR_NO": E(BRIDGE[g["code"]]["no"]),
+      "SB_LIVE": E(BRIDGE[g["code"]]["sb_live"]), "SB_UNIT": E(BRIDGE[g["code"]]["sb_unit"]),
+      "SB_SOLD": E(BRIDGE[g["code"]]["sb_sold"]), "SB_SORRY": E(BRIDGE[g["code"]]["sb_sorry"]),
       "GU_KICK": E(g["guar_kick"]), "GU_H2": E(g["guar_h2"]),
       "SEAL1": E(g["guar_seal"][0]), "SEAL2": E(g["guar_seal"][1]), "GU_P": E(g["guar_p"]),
       "FQ_KICK": E(g["faq_kick"]), "FQ_H2": E(g["faq_h2"]), "FAQ": build_faq(g),
@@ -1066,6 +1101,11 @@ TEMPLATE = r"""<!DOCTYPE html>
 {{JSONLD}}
 </head>
 <body>
+<div class="soldbar" id="soldbar" data-state="live"><div class="wrap">
+  <span class="sb-msg sb-l"><span class="sb-dot"></span>{{SB_LIVE}}: <b><span data-cz-stock>2</span></b> {{SB_UNIT}}</span>
+  <span class="sb-msg sb-s">{{SB_SOLD}}</span>
+  <span class="sb-msg sb-sry">{{SB_SORRY}}</span>
+</div></div>
 <div class="announce">
   <span>{{ANNOUNCE_SHIP}}</span>
   <span>{{ANNOUNCE_CD}} <b data-cd>15:00</b></span>
@@ -1217,16 +1257,23 @@ TEMPLATE = r"""<!DOCTYPE html>
 <!-- BRIDGE: Coolizi sold out -> AiraBreeze switch (fires on buy intent / exit / dwell) -->
 <div class="modal-bg" id="bridge"><div class="modal bridge">
   <span class="x js-bx" aria-label="close">×</span>
-  <div class="top">
-    <div class="br-badge">{{BR_BADGE}}</div>
-    <h3>{{BR_H}}</h3><p>{{BR_SUB}}</p>
-  </div>
-  <div class="body">
-    <div class="br-chips"><span>❄ {{BR_C1}}</span><span>🚚 {{BR_C2}}</span><span>🛡 {{BR_C3}}</span></div>
-    <div class="br-deal"><span class="br-pct">{{BR_PCT}}</span><span class="br-deal-t">{{BR_DEAL}} <b data-mcd>15:00</b></span></div>
-    <div class="br-stock">🔥 {{BR_STOCK}}</div>
-    <a class="btn pulse js-go br-cta" href="#">{{BR_CTA}} <span class="arw">→</span></a>
-    <button class="decline js-bx">{{BR_NO}}</button>
+  <div class="br-grid">
+    <div class="br-media">
+      <img src="../assets/img/airabreeze.png" alt="AiraBreeze portable cooler" width="348" height="214" loading="lazy">
+      <div class="br-pctbadge">{{BR_PCT}}<small>today</small></div>
+    </div>
+    <div class="br-content">
+      <div class="br-badge">{{BR_BADGE}}</div>
+      <h3>{{BR_H}}</h3>
+      <p class="br-heat">{{BR_HEAT}}</p>
+      <p class="br-sub">{{BR_SUB}}</p>
+      <div class="br-chips"><span>❄ {{BR_C1}}</span><span>🚚 {{BR_C2}}</span><span>🛡 {{BR_C3}}</span></div>
+      <div class="br-deal"><span class="br-deal-t">{{BR_DEAL}}</span> <b data-mcd>15:00</b></div>
+      <div class="br-demand">🔥 {{BR_DEMAND}} · {{BR_STOCK}}</div>
+      <a class="btn pulse js-go br-cta" href="#">{{BR_CTA}} <span class="arw">→</span></a>
+      <div class="br-auto">{{BR_AUTO}} <b id="br-auto-n">15</b>s</div>
+      <button class="decline js-bx">{{BR_NO}}</button>
+    </div>
   </div>
 </div></div>
 
@@ -1268,12 +1315,15 @@ def render_root(geos):
 <link rel="canonical" href="%s/en/">
 <link rel="stylesheet" href="assets/styles.css">
 <script>
-var M=%s, BASE='https://trycoolizi.com/', done=false;
+var M=%s, GEOS=['en','de','fr','it','es','nl','pt','el'], BASE='https://trycoolizi.com/', done=false;
 function go(dest){if(done)return;done=true;location.replace(BASE+dest+'/'+location.search);}
-fetch('https://ipwho.is/',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
-  go(M[(d&&d.country_code)||'']||'en');
-}).catch(function(){go('en');});
-setTimeout(function(){go('en');},2500);
+function langGuess(){var ls=navigator.languages||[navigator.language||''];for(var i=0;i<ls.length;i++){var k=(ls[i]||'').slice(0,2).toLowerCase();if(GEOS.indexOf(k)>=0)return k;}return null;}
+var guess=langGuess();
+function pick(cc){go(M[(cc||'').toUpperCase()]||guess||'en');}
+// ipinfo (fast, token) -> ipwho.is fallback -> browser language -> en. Never bounce DE/etc. to /en/ on a slow lookup.
+fetch('https://ipinfo.io/json?token=fcc8c88c9a040a',{cache:'no-store'}).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(d){pick(d&&d.country);})
+.catch(function(){fetch('https://ipwho.is/',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){pick(d&&d.country_code);}).catch(function(){go(guess||'en');});});
+setTimeout(function(){go(guess||'en');},4000);
 </script>
 </head><body><div class="picker">
 <h1>Coolizi Portable AC</h1>
