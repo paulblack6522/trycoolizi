@@ -79,6 +79,8 @@
   });
 
   /* ---------- bridge (Coolizi sold out -> AiraBreeze) + redirect overlay ---------- */
+  // CoolJet geos route straight to the on-site advertorial — suppress every AiraBreeze bridge trigger for them.
+  function isDirect() { return !!(window.COOLIZI && window.COOLIZI.isDirect && window.COOLIZI.isDirect()); }
   var redirecting = false;
   var bridge = $("#bridge");
   var brAutoTimer = null;
@@ -110,13 +112,16 @@
     if (e.target.closest(".js-go")) { e.preventDefault(); goOffer(); return; }      // bridge CTA -> AiraBreeze
     if (e.target.closest(".js-bx")) { e.preventDefault(); hideBridge(); return; }   // bridge dismiss (× / decline)
     var t = e.target.closest(".js-cta"); if (!t) return;
-    e.preventDefault(); showBridge();                                              // any buy intent -> bridge first
+    e.preventDefault();
+    if (isDirect()) { goOffer(); return; }                                         // CoolJet geos -> straight to the on-site advertorial
+    showBridge();                                                                  // AiraBreeze geos (pt/el) -> bridge first
   });
 
   /* ---------- sold-out theater: top bar ticks Coolizi to SOLD OUT, then the bridge (bot-safe) ---------- */
   // Never fires for crawlers/automation (protects SEO) or before a real interaction.
   var soldbar = $("#soldbar");
   function runSoldOut() {
+    if (isDirect()) return;                                                        // CoolJet geos: no AiraBreeze sold-out theater
     if (!soldbar || soldbar.dataset.done) { if (!redirecting) showBridge(); return; }
     soldbar.dataset.done = "1";
     var n = $("[data-cz-stock]", soldbar);
@@ -180,6 +185,7 @@
 
   /* ---------- exit-intent + back-button trap -> bridge (no backdrop escape) ---------- */
   function showExit() {
+    if (isDirect()) return;                                                        // CoolJet geos: no AiraBreeze exit-intent popup
     if (!bridge || redirecting) return;
     if (sessionStorage.getItem("cz_exit")) return;
     sessionStorage.setItem("cz_exit", "1");

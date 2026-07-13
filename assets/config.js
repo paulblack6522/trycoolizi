@@ -2,23 +2,26 @@
 (function () {
   "use strict";
 
-  // ============ OFFER LINKS — EDIT HERE TO CHANGE WHERE EACH GEO'S "BUY" BUTTON SENDS TRAFFIC ============
-  // NETWORK: Blitz Ads (bikiraibn, affiliate a=2397) → AiraBreeze. To change an offer: edit the "c"
-  // (creative id) for a geo, then commit. LIVE in ~1 minute, no rebuild. Keep "s1" (our geo tracking tag).
-  // Final link = AFF_BASE + "&c=<c>&s1=<s1>" (+ "&s2=<clickid>" for paid).   DACH creative = 9540, INTL = 9538.
-  var AFF_BASE = "https://bikiraibn.com/?a=2397";
+  // ============ OFFER ROUTING — EDIT HERE TO CHANGE WHERE EACH GEO'S "BUY" BUTTON SENDS TRAFFIC ============
+  // Two rails:
+  //   • CoolJet geos (en/de/fr/it/es/nl): buy-intent goes to the on-site CoolJet advertorial (/{geo}/cooljet/).
+  //     That page carries the CoolJet Stellar-Yonder/Everflow link (geo tag on sub1, gclid on sub2). Because it
+  //     is same-origin, the gclid captured on landing (localStorage "cz_track") is read there — nothing to pass.
+  //   • Blitz geos (pt/el): NO CoolJet offer exists for PT/GR, so these stay on Blitz Ads/AiraBreeze
+  //     (bikiraibn a=2397). Final link = BLITZ_BASE + "&c=<c>&s1=<s1>" (+ "&s2=<clickid>").  INTL creative = 9538.
+  // LIVE in ~1 minute, no rebuild.
+  var BLITZ_BASE = "https://bikiraibn.com/?a=2397";
   var OFFERS = {
-    //  geo :  { c: "<creative id>",  s1: "<tracking tag>" }
-    "en": { c: "9538", s1: "intl-uk" },   // INTL → UK / Ireland
-    "de": { c: "9540", s1: "try-de"  },   // DACH → DE / AT / CH
-    "fr": { c: "9538", s1: "intl-fr" },   // INTL → FR / BE
-    "it": { c: "9538", s1: "intl-it" },   // INTL → Italy
-    "es": { c: "9538", s1: "intl-es" },   // INTL → Spain
-    "nl": { c: "9538", s1: "intl-nl" },   // INTL → Netherlands
-    "pt": { c: "9538", s1: "intl-pt" },   // INTL → Portugal
-    "el": { c: "9538", s1: "intl-gr" }    // INTL → Greece
+    "en": { direct: "/en/cooljet/" },     // CoolJet UK  advertorial
+    "de": { direct: "/de/cooljet/" },     // CoolJet DE/AT advertorial
+    "fr": { direct: "/fr/cooljet/" },     // CoolJet FR  advertorial
+    "it": { direct: "/it/cooljet/" },     // CoolJet IT  advertorial
+    "es": { direct: "/es/cooljet/" },     // CoolJet ES  advertorial
+    "nl": { direct: "/nl/cooljet/" },     // CoolJet NL  advertorial
+    "pt": { c: "9538", s1: "intl-pt" },   // Blitz/AiraBreeze — no CoolJet PT
+    "el": { c: "9538", s1: "intl-gr" }    // Blitz/AiraBreeze — no CoolJet GR
   };
-  // ======================================================================================================
+  // ========================================================================================================
   var IPINFO_TOKEN = "fcc8c88c9a040a"; // geo provider for the social-proof ticker (ipwho.is is the fallback)
 
   // ---- capture inbound click-ids ONCE (first-touch) ----
@@ -37,16 +40,21 @@
 
   function getTrack() { try { return JSON.parse(localStorage.getItem("cz_track") || "{}"); } catch (e) { return {}; } }
 
-  // ---- build the outbound affiliate URL (call at click time) ----
-  function buildOfferUrl() {
+  function currentOffer() {
     var g = window.GEO || {};
-    var off = (OFFERS && OFFERS[g.code]) || OFFERS.en || {};   // default to INTL/EN if geo unknown
-    var c = off.c;
-    var s1 = off.s1 || ("intl-" + (g.code || "xx"));
-    var u = new URL(AFF_BASE);
-    if (c) u.searchParams.set("c", c);
-    u.searchParams.set("s1", s1);
-    // pass any paid click-id into s2 for later reconciliation
+    return (OFFERS && OFFERS[g.code]) || OFFERS.en || {};      // default to EN/CoolJet if geo unknown
+  }
+  // Does this geo route straight to an on-site advertorial (no AiraBreeze bridge)?
+  function isDirect() { return !!currentOffer().direct; }
+
+  // ---- build the outbound "buy" URL (call at click time) ----
+  function buildOfferUrl() {
+    var off = currentOffer();
+    if (off.direct) return off.direct;                         // on-site CoolJet advertorial (gclid already in cz_track)
+    // Blitz / AiraBreeze rail (pt, el)
+    var u = new URL(BLITZ_BASE);
+    if (off.c) u.searchParams.set("c", off.c);
+    u.searchParams.set("s1", off.s1 || ("intl-" + ((window.GEO || {}).code || "xx")));
     var t = getTrack();
     var clickid = t.gclid || t.fbclid || t.ttclid || t.msclkid;
     if (clickid) u.searchParams.set("s2", clickid);
@@ -93,5 +101,5 @@
     });
   }
 
-  window.COOLIZI = { buildOfferUrl: buildOfferUrl, getGeo: getGeo, getTrack: getTrack };
+  window.COOLIZI = { buildOfferUrl: buildOfferUrl, getGeo: getGeo, getTrack: getTrack, isDirect: isDirect };
 })();
