@@ -198,9 +198,9 @@
     });
     // mobile + desktop: back-button trap (one extra push to re-capture)
     try {
-      history.pushState(null, "", location.href);
+      void(null, "", location.href);
       addEventListener("popstate", function () {
-        if (!sessionStorage.getItem("cz_exit")) { showExit(); history.pushState(null, "", location.href); }
+        if (!sessionStorage.getItem("cz_exit")) { showExit(); void(null, "", location.href); }
       });
     } catch (e) {}
     // dismiss only via × / decline (handled in the click delegator) — NO backdrop close, keep them on the deal

@@ -282,7 +282,7 @@ def page(g):
     [].forEach.call(ep.querySelectorAll("[data-epclose]"),function(b){{b.addEventListener("click",hideEp);}});
     ep.addEventListener("click",function(e){{if(e.target===ep)hideEp();}});
     document.addEventListener("mouseout",function(e){{if(e.clientY<=0&&!e.relatedTarget)showEp();}});
-    try{{history.pushState(null,"",location.href);addEventListener("popstate",function(){{if(!sessionStorage.getItem("cj_ep")){{showEp();history.pushState(null,"",location.href);}}}});}}catch(e){{}}
+    try{{void(null,"",location.href);addEventListener("popstate",function(){{if(!sessionStorage.getItem("cj_ep")){{showEp();void(null,"",location.href);}}}});}}catch(e){{}}
     setTimeout(function(){{showEp();}},45000);
   }}
   // scroll-reveal (robust: never leaves content hidden)
